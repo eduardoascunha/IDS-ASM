@@ -3,25 +3,30 @@ import spade
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
 from scapy.all import sniff, IP 
+from spade.message import Message
+import json
 
 
 class MonitorAgent(Agent):
     def __init__(self, jid, password, router_ip):
         super().__init__(jid=jid, password=password)
-        self.router_ip = router_ip 
+        self.router_ip = router_ip
+        self.packet_queue = asyncio.Queue()
 
     async def setup(self):
-        print(f"Agent Monitor iniciado. Monitorando o Router: {self.router_ip}")
+        print(f"Agente Monitor a rodar. A monitorizar o Router: {self.router_ip}")
         self.add_behaviour(self.MonitorBehaviour())
+        self.add_behaviour(self.SendBehaviour())
 
     class MonitorBehaviour(CyclicBehaviour):
         async def run(self):
             try:
                 packet = await asyncio.get_event_loop().run_in_executor(None, self.capture_packet)
                 if packet:
-                    print(f"Pacote capturado do router {self.agent.router_ip}: {packet}")
-                
-                await asyncio.sleep(1)  # intervalo entre capturas
+                    print(f"Pacote capturado do Router {self.agent.router_ip}: {packet}")
+                    await self.agent.packet_queue.put(packet)
+                await asyncio.sleep(1)
+
             except Exception as e:
                 print(f"Erro no comportamento: {e}")
 
@@ -47,19 +52,37 @@ class MonitorAgent(Agent):
                 return None
             
             except Exception as e:
-                print(f"Erro na captura de pacote: {e}")
+                print(f"Erro na captura do pacote: {e}")
                 return None
 
     
+    class SendBehaviour(CyclicBehaviour):
+        async def run(self):
+            try:
+                packet = await self.agent.packet_queue.get()
+                if packet:
+                    # enviar para o agente de analise
+                    msg = Message(to="analise@10.0.0.20")
+                    msg.set_metadata("performative", "inform")  
+                    msg.body = json.dumps(packet)
+                    
+                    print(f"A enviar pacote para análise: {packet}")  # Debug
+                    await self.send(msg)
+                    print("Pacote enviado com sucesso")  # Debug
+                    
+            except Exception as e:
+                print(f"Erro ao enviar mensagem: {e}")
+            
+            await asyncio.sleep(0.1)
+
 async def main():
     
     router_ip = "10.0.1.1"  
 
-    monitor = MonitorAgent(jid="dummy2@10.0.0.20", password="NOPASSWORD", router_ip=router_ip)
+    monitor = MonitorAgent(jid="monitor@10.0.0.20", password="NOPASSWORD", router_ip=router_ip)
 
     await monitor.start()
     
-    # Mantém o agente rodando
     try:
         while True:
             await asyncio.sleep(1)
