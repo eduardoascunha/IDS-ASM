@@ -4,7 +4,8 @@ from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 import json
-from signatures import ATTACK_SIGNATURES  # Importa as assinaturas
+from signatures import ATTACK_SIGNATURES  
+import jsonpickle
 
 
 class AnaliseAgent(Agent):
@@ -22,12 +23,17 @@ class AnaliseAgent(Agent):
         async def run(self):
             try:
                 # Recebe mensagem do agente monitor
-                msg = await self.receive(timeout=2)
+                print("Aguardando mensagem do monitor")
+                msg = await self.receive(timeout=10)
                 print(f"Mensagem recebida: {msg}")
                 if msg:
-                    packet_data = json.loads(msg.body)
+                    #packet_data = json.loads(msg.body
+                    print(f"recebi algo!!!!!!!!!!!!")
+                    packet_data = jsonpickle.decode(msg.body)
                     print(f"Pacote recebido: {packet_data}")
                     await self.analyze_packet(packet_data)
+                else:
+                    print("Nenhuma mensagem recebida")
                 
                 await asyncio.sleep(1)
             
@@ -159,4 +165,4 @@ async def main():
         await analise.stop()
 
 if __name__ == "__main__":
-    asyncio.run(main())  
+    spade.run(main())

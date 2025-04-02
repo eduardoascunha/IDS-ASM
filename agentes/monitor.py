@@ -5,6 +5,7 @@ from spade.behaviour import CyclicBehaviour
 from scapy.all import sniff, IP 
 from spade.message import Message
 import json
+import jsonpickle
 
 
 class MonitorAgent(Agent):
@@ -64,7 +65,8 @@ class MonitorAgent(Agent):
                     # enviar para o agente de analise
                     msg = Message(to="analise@10.0.0.20")
                     msg.set_metadata("performative", "inform")  
-                    msg.body = json.dumps(packet)
+                    #msg.body = json.dumps(packet)
+                    msg.body = jsonpickle.encode(packet)
                     
                     print(f"A enviar pacote para análise: {packet}")  # Debug
                     await self.send(msg)
@@ -90,4 +92,4 @@ async def main():
         await monitor.stop()
 
 if __name__ == "__main__":
-    asyncio.run(main())  
+    spade.run(main())
