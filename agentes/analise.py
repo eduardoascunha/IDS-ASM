@@ -7,6 +7,10 @@ import json
 from signatures import ATTACK_SIGNATURES  
 import jsonpickle
 
+RED = '\033[31m'
+GREEN = '\033[32m'
+BLUE = '\033[34m'
+RESET = '\033[0m'
 
 class AnaliseAgent(Agent):
     def __init__(self, jid, password):
@@ -16,28 +20,26 @@ class AnaliseAgent(Agent):
         self.alerts = []
 
     async def setup(self):
-        print("Agente de Análise iniciado. A monitorizar pacotes...")
+        print(BLUE + "[Analise] Agente de Análise iniciado." + RESET)
         self.add_behaviour(self.AnaliseBehaviour())
 
     class AnaliseBehaviour(CyclicBehaviour):
         async def run(self):
             try:
                 # Recebe mensagem do agente monitor
-                print("Aguardando mensagem do monitor")
                 msg = await self.receive(timeout=10)
-                print(f"Mensagem recebida: {msg}")
                 if msg:
                     #packet_data = json.loads(msg.body
                     packet_data = jsonpickle.decode(msg.body)
-                    print(f"Pacote recebido: {packet_data}")
+                    print(BLUE + f"[Analise] Pacote recebido: {packet_data}" + RESET)
                     await self.analyze_packet(packet_data)
                 else:
-                    print("Nenhuma mensagem recebida")
+                    print(BLUE + "[Analise] Nenhuma mensagem recebida" + RESET)
                 
                 await asyncio.sleep(1)
             
             except Exception as e:
-                print(f"Erro na análise: {e}")
+                print(BLUE + f"[Analise] Erro na análise: {e}" + RESET)
 
         async def analyze_packet(self, packet):
             # Adiciona timestamp ao pacote
@@ -80,7 +82,7 @@ class AnaliseAgent(Agent):
                     "timestamp": current_time,
                     "details": f"Detetadas {len(unique_ports)} tentativas de ligação em portas diferentes"
                 }
-                print(f"ALERTA: {alert}")
+                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
         async def check_ping_flood(self):
@@ -97,7 +99,7 @@ class AnaliseAgent(Agent):
                     "timestamp": current_time,
                     "details": f"Detectados {len(recent_icmp)} pacotes ICMP em {self.agent.signatures['ping_flood']['conditions']['time_window']} segundo"
                 }
-                print(f"ALERTA: {alert}")
+                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
         async def check_syn_flood(self):
@@ -114,7 +116,7 @@ class AnaliseAgent(Agent):
                     "timestamp": current_time,
                     "details": f"Detectados {len(recent_tcp)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
                 }
-                print(f"ALERTA: {alert}")
+                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
         async def check_dns_flood(self):
@@ -132,7 +134,7 @@ class AnaliseAgent(Agent):
                     "timestamp": current_time,
                     "details": f"Detectados {len(recent_dns)} pacotes DNS em {self.agent.signatures['dns_flood']['conditions']['time_window']} segundo"
                 }
-                print(f"ALERTA: {alert}")
+                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
         async def check_http_flood(self):
@@ -150,5 +152,5 @@ class AnaliseAgent(Agent):
                     "timestamp": current_time,
                     "details": f"Detectados {len(recent_http)} pacotes HTTP em {self.agent.signatures['http_flood']['conditions']['time_window']} segundo"
                 }
-                print(f"ALERTA: {alert}")
+                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
