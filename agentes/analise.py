@@ -28,7 +28,6 @@ class AnaliseAgent(Agent):
                 print(f"Mensagem recebida: {msg}")
                 if msg:
                     #packet_data = json.loads(msg.body
-                    print(f"recebi algo!!!!!!!!!!!!")
                     packet_data = jsonpickle.decode(msg.body)
                     print(f"Pacote recebido: {packet_data}")
                     await self.analyze_packet(packet_data)
@@ -153,16 +152,3 @@ class AnaliseAgent(Agent):
                 }
                 print(f"ALERTA: {alert}")
                 self.agent.alerts.append(alert)
-
-async def main():
-    analise = AnaliseAgent(jid="analise@10.0.0.20", password="NOPASSWORD")
-    await analise.start()
-    
-    try:
-        while True:
-            await asyncio.sleep(1)
-    except KeyboardInterrupt:
-        await analise.stop()
-
-if __name__ == "__main__":
-    spade.run(main())

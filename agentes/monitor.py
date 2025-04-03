@@ -46,7 +46,7 @@ class MonitorAgent(Agent):
         def capture_packet(self):
             try:
                 # captura um pacote
-                packets = sniff(iface="eth0", count=1, prn=self.packet_callback, filter="icmp") 
+                packets = sniff(iface="eth2", count=1, prn=self.packet_callback, filter="icmp") 
                 
                 if packets and len(packets) > 0:
                     return self.packet_callback(packets[0])
@@ -76,20 +76,3 @@ class MonitorAgent(Agent):
                 print(f"Erro ao enviar mensagem: {e}")
             
             await asyncio.sleep(0.1)
-
-async def main():
-    
-    router_ip = "10.0.1.1"  
-
-    monitor = MonitorAgent(jid="monitor@10.0.0.20", password="NOPASSWORD", router_ip=router_ip)
-
-    await monitor.start()
-    
-    try:
-        while True:
-            await asyncio.sleep(1)
-    except KeyboardInterrupt:
-        await monitor.stop()
-
-if __name__ == "__main__":
-    spade.run(main())

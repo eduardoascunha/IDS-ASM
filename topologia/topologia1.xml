@@ -2,46 +2,29 @@
 <scenario>
   <networks/>
   <devices>
-    <device id="1" name="host" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="130.0" y="245.0" lat="47.57693939837613" lon="-122.13057250394594" alt="2.0"/>
+    <device id="2" name="router-ids" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+      <position x="387.0" y="263.0" lat="47.57677577728739" lon="-122.12710949852567" alt="2.0"/>
       <services>
-        <service name="DefaultRoute"/>
-      </services>
-    </device>
-    <device id="2" name="router1" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="363.0" y="205.0" lat="47.57730299896499" lon="-122.12743289202794" alt="2.0"/>
-      <services>
-        <service name="OSPFv3"/>
-        <service name="IPForward"/>
-        <service name="zebra"/>
         <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
+        <service name="zebra"/>
+        <service name="IPForward"/>
       </services>
     </device>
-    <device id="3" name="monitor" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="590.0" y="271.0" lat="47.57670305663938" lon="-122.12437412848553" alt="2.0"/>
+    <device id="3" name="App" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="148.0" y="265.0" lat="47.57675759713485" lon="-122.13032995881925" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
-    <device id="4" name="n4" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="188.0" y="79.0" lat="47.578448324316376" lon="-122.12979096964875" alt="2.0"/>
-      <services>
-        <service name="DefaultRoute"/>
-      </services>
-    </device>
-    <device id="5" name="n5" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="547.0" y="91.0" lat="47.57833924679088" lon="-122.12495354184378" alt="2.0"/>
+    <device id="4" name="atacante" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="638.0" y="262.0" lat="47.57678486736129" lon="-122.12372734148096" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
   </devices>
   <links>
-    <link node1="1" node2="2">
-      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.20" ip4_mask="24" ip6="2001::14" ip6_mask="64"/>
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:01" ip4="10.0.0.1" ip4_mask="24" ip6="2001::1" ip6_mask="64"/>
-      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
-    </link>
     <link node1="2" node2="3">
       <iface1 id="1" name="eth1" mac="00:00:00:aa:00:02" ip4="10.0.1.1" ip4_mask="24" ip6="2001:0:0:1::1" ip6_mask="64"/>
       <iface2 id="0" name="eth0" mac="00:00:00:aa:00:03" ip4="10.0.1.20" ip4_mask="24" ip6="2001:0:0:1::14" ip6_mask="64"/>
@@ -50,11 +33,6 @@
     <link node1="4" node2="2">
       <iface1 id="0" name="eth0" mac="00:00:00:aa:00:04" ip4="10.0.2.20" ip4_mask="24" ip6="2001:0:0:2::14" ip6_mask="64"/>
       <iface2 id="2" name="eth2" mac="00:00:00:aa:00:05" ip4="10.0.2.1" ip4_mask="24" ip6="2001:0:0:2::1" ip6_mask="64"/>
-      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
-    </link>
-    <link node1="5" node2="2">
-      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:06" ip4="10.0.3.20" ip4_mask="24" ip6="2001:0:0:3::14" ip6_mask="64"/>
-      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:07" ip4="10.0.3.1" ip4_mask="24" ip6="2001:0:0:3::1" ip6_mask="64"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
   </links>
