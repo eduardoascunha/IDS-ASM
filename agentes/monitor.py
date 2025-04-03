@@ -66,9 +66,12 @@ class MonitorAgent(Agent):
                 i = 0
                 packets = []
 
-                while not self.agent.packet_queue.empty() or i < 100:
-                    packets.append(await self.agent.packet_queue.get())
-                    i += 1
+                # Aguardar até 5 pacotes ou 1 segundo
+                start_time = asyncio.get_event_loop().time()
+                while (not self.agent.packet_queue.empty() or i < 5) and (asyncio.get_event_loop().time() - start_time < 1):
+                    if not self.agent.packet_queue.empty():
+                        packets.append(await self.agent.packet_queue.get())
+                        i += 1
     
                 if packets:
                     msg = Message(to="analise@10.0.6.1")
