@@ -14,13 +14,12 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class MonitorAgent(Agent):
-    def __init__(self, jid, password, router_ip):
+    def __init__(self, jid, password):
         super().__init__(jid=jid, password=password)
-        self.router_ip = router_ip
         self.packet_queue = asyncio.Queue()
 
     async def setup(self):
-        print(GREEN + f"[Monitor] Agente Monitor a rodar. A monitorizar o Router: {self.router_ip}" + RESET)
+        print(GREEN + f"[Monitor] Agente Monitor a rodar." + RESET)
         self.add_behaviour(self.MonitorBehaviour())
         self.add_behaviour(self.SendBehaviour())
 
@@ -29,7 +28,7 @@ class MonitorAgent(Agent):
             try:
                 packet = await asyncio.get_event_loop().run_in_executor(None, self.capture_packet)
                 if packet:
-                    print(GREEN + f"[Monitor] Pacote capturado do Router {self.agent.router_ip}: {packet}" + RESET)
+                    print(GREEN + f"[Monitor] Pacote capturado do Router: {packet}" + RESET)
                     # Coloca cada pacote individualmente na fila
                     for pkt in packet:
                         await self.agent.packet_queue.put(pkt)
@@ -52,7 +51,7 @@ class MonitorAgent(Agent):
 
         def capture_packet(self):
             try:
-                packets = sniff(iface="eth2", timeout=1, filter="not src host 10.0.2.1")
+                packets = sniff(iface="eth2", timeout=1, filter="not src host 10.0.6.1")
                 processed_packets = [self.packet_callback(pkt) for pkt in packets if self.packet_callback(pkt)]
                 return processed_packets if processed_packets else None  # Retorna uma lista de pacotes processados ou None
             except Exception as e:
@@ -72,7 +71,7 @@ class MonitorAgent(Agent):
                     i += 1
     
                 if packets:
-                    msg = Message(to="analise@10.0.2.1")
+                    msg = Message(to="analise@10.0.6.1")
                     msg.set_metadata("performative", "inform")
                     msg.body = jsonpickle.encode(packets)  # Enviar varios pacotes
                     

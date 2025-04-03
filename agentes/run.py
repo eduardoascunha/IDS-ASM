@@ -5,12 +5,10 @@ from analise import AnaliseAgent
 
 async def main():
 
-    router_ip = "10.0.2.1"
-
-    analise = AnaliseAgent(jid="analise@10.0.2.1", password="NOPASSWORD")
+    analise = AnaliseAgent(jid="analise@10.0.6.1", password="NOPASSWORD")
     await analise.start()
     
-    monitor = MonitorAgent(jid="monitor@10.0.2.1", password="NOPASSWORD", router_ip=router_ip)
+    monitor = MonitorAgent(jid="monitor@10.0.6.1", password="NOPASSWORD")
     await monitor.start()
 
     try:
