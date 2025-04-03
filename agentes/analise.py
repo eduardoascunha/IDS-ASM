@@ -29,17 +29,25 @@ class AnaliseAgent(Agent):
                 # Recebe mensagem do agente monitor
                 msg = await self.receive(timeout=10)
                 if msg:
-                    #packet_data = json.loads(msg.body
-                    packet_data = jsonpickle.decode(msg.body)
-                    print(BLUE + f"[Analise] Pacote recebido: {packet_data}" + RESET)
-                    await self.analyze_packet(packet_data)
+                    try:
+                        packet_data = jsonpickle.decode(msg.body)
+
+                        # Se for uma lista de pacotes, processa um por um
+                        if isinstance(packet_data, list):
+                            print(BLUE + f"[Analise] {len(packet_data)} lista de pacotes recebidos, com {len(packet_data)} pacotes." + RESET)
+                            for packet in packet_data:
+                                await self.analyze_packet(packet)
+                        else:
+                            print(BLUE + f"[Analise] Pacote recebido: {packet_data}" + RESET)
+                            await self.analyze_packet(packet_data)
+
+                    except Exception as e:
+                        print(RED + f"[Analise] Erro ao decodificar mensagem: {e}" + RESET)
                 else:
                     print(BLUE + "[Analise] Nenhuma mensagem recebida" + RESET)
-                
-                await asyncio.sleep(1)
-            
+
             except Exception as e:
-                print(BLUE + f"[Analise] Erro na análise: {e}" + RESET)
+                print(RED + f"[Analise] Erro na análise: {e}" + RESET)
 
         async def analyze_packet(self, packet):
             # Adiciona timestamp ao pacote
@@ -80,7 +88,7 @@ class AnaliseAgent(Agent):
                     "type": "port_scan",
                     "src_ip": src_ip,
                     "timestamp": current_time,
-                    "details": f"Detetadas {len(unique_ports)} tentativas de ligação em portas diferentes"
+                    "details": f"Detetadas {len(unique_ports)} tentativas de ligação em portas diferentes proveniente do ip: {src_ip}"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)

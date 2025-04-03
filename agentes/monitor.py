@@ -6,6 +6,7 @@ from scapy.all import sniff, IP
 from spade.message import Message
 import json
 import jsonpickle
+from datetime import datetime
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -29,15 +30,17 @@ class MonitorAgent(Agent):
                 packet = await asyncio.get_event_loop().run_in_executor(None, self.capture_packet)
                 if packet:
                     print(GREEN + f"[Monitor] Pacote capturado do Router {self.agent.router_ip}: {packet}" + RESET)
-                    await self.agent.packet_queue.put(packet)
-                await asyncio.sleep(1)
-
+                    # Coloca cada pacote individualmente na fila
+                    for pkt in packet:
+                        await self.agent.packet_queue.put(pkt)
+                await asyncio.sleep(0.1)
             except Exception as e:
                 print(GREEN + f"[Monitor] Erro no comportamento: {e}" + RESET)
 
         def packet_callback(self, pkt):
             if IP in pkt:
                 return {
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:23],
                     "src_ip": pkt[IP].src,
                     "dst_ip": pkt[IP].dst,
                     "protocol": pkt[IP].proto,
@@ -49,35 +52,34 @@ class MonitorAgent(Agent):
 
         def capture_packet(self):
             try:
-                # captura um pacote
-                #packets = sniff(iface="eth2", count=1, prn=self.packet_callback, filter="icmp") 
-                packets = sniff(iface="eth2", count=1, filter="icmp") 
-                
-                if packets and len(packets) > 0:
-                    return self.packet_callback(packets[0])
-                return None
-            
+                packets = sniff(iface="eth2", timeout=1, filter="not src host 10.0.2.1")
+                processed_packets = [self.packet_callback(pkt) for pkt in packets if self.packet_callback(pkt)]
+                return processed_packets if processed_packets else None  # Retorna uma lista de pacotes processados ou None
             except Exception as e:
                 print(GREEN + f"[Monitor] Erro na captura do pacote: {e}" + RESET)
                 return None
+
 
     
     class SendBehaviour(CyclicBehaviour):
         async def run(self):
             try:
-                packet = await self.agent.packet_queue.get()
-                if packet:
-                    # enviar para o agente de analise
+                i = 0
+                packets = []
+
+                while not self.agent.packet_queue.empty() or i < 100:
+                    packets.append(await self.agent.packet_queue.get())
+                    i += 1
+    
+                if packets:
                     msg = Message(to="analise@10.0.2.1")
-                    msg.set_metadata("performative", "inform")  
-                    #msg.body = json.dumps(packet)
-                    msg.body = jsonpickle.encode(packet)
+                    msg.set_metadata("performative", "inform")
+                    msg.body = jsonpickle.encode(packets)  # Enviar varios pacotes
                     
-                    print(GREEN + f"[Monitor] A enviar pacote para análise: {packet}" + RESET)  # Debug
                     await self.send(msg)
-                    print(GREEN + "[Monitor] Pacote enviado com sucesso" + RESET)  # Debug
-                    
+                    print(GREEN + f"[Monitor] {len(packets)} pacotes enviados com sucesso" + RESET)
+                
+                await asyncio.sleep(0.1)
+
             except Exception as e:
-                print(GREEN + f"[Monitor] Erro ao enviar mensagem: {e}" + RESET)
-            
-            await asyncio.sleep(0.1)
+                print(GREEN + f"[Monitor] Erro ao enviar pacotes: {e}" + RESET) 
