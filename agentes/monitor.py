@@ -9,7 +9,7 @@ import jsonpickle
 from datetime import datetime
 
 from behaviour.MonitorBehaviour import MonitorBehaviour
-from behaviour.SendBehaviour import SendBehaviour
+from behaviour.SendPacketBehaviour import SendPacketBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -27,4 +27,4 @@ class MonitorAgent(Agent):
     async def setup(self):
         print(GREEN + f"[Monitor] Agente Monitor a rodar." + RESET)
         self.add_behaviour(MonitorBehaviour())
-        self.add_behaviour(SendBehaviour())
+        self.add_behaviour(SendPacketBehaviour())
