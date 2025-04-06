@@ -1,8 +1,8 @@
 import spade
 import asyncio
 import sys
-from monitor import MonitorAgent
-from analise import AnaliseAgent
+from agentes.monitor import MonitorAgent
+from agentes.analise import AnaliseAgent
 
 async def main():
     if len(sys.argv) == 1:
