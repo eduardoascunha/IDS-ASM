@@ -5,9 +5,9 @@ from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 from misc.signatures import ATTACK_SIGNATURES   
 import joblib
-import pandas as pd
 
 from behaviours.AnaliseBehaviour import AnaliseBehaviour
+from behaviours.RecvBehav import RecvBehav
 
 RED = '\033[31m'
 GREEN = '\033[32m'

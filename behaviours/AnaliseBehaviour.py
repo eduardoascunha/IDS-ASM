@@ -4,6 +4,7 @@ from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 import jsonpickle
+import pandas as pd
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -16,7 +17,7 @@ class AnaliseBehaviour(CyclicBehaviour):
                 # Recebe mensagem do agente monitor
                 msg = await self.receive(timeout=10)
                 if msg:
-                    
+
                     if msg.metadata["performative"] == 'inform-fluxo':
                          print(BLUE,"Received message from sender")
                          flow_info = jsonpickle.decode(msg.body)

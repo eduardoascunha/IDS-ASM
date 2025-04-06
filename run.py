@@ -19,6 +19,8 @@ async def main():
 
     analise = AnaliseAgent(jid=f"analise@{ip}", password="NOPASSWORD")
     await analise.start()
+
+    print("debug1")
     
     monitor = MonitorAgent(jid=f"monitor@{ip}", password="NOPASSWORD", agenteAnalise=analise.jid, ip=ip,interface=interface)
     await monitor.start()
