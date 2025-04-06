@@ -4,8 +4,10 @@ from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 from misc.signatures import ATTACK_SIGNATURES   
+import joblib
+import pandas as pd
 
-from behaviour.AnaliseBehaviour import AnaliseBehaviour
+from behaviours.AnaliseBehaviour import AnaliseBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -18,6 +20,8 @@ class AnaliseAgent(Agent):
         self.signatures = ATTACK_SIGNATURES
         self.recent_packets = []
         self.alerts = []
+        self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
+        self.add_behaviour(RecvBehav())
 
     async def setup(self):
         print(BLUE + "[Analise] Agente de Análise iniciado." + RESET)

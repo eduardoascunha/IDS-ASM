@@ -8,8 +8,8 @@ import json
 import jsonpickle
 from datetime import datetime
 
-from behaviour.MonitorBehaviour import MonitorBehaviour
-from behaviour.SendPacketBehaviour import SendPacketBehaviour
+from behaviours.MonitorBehaviour import MonitorBehaviour
+from behaviours.SendPacketBehaviour import SendPacketBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
