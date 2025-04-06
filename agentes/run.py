@@ -1,14 +1,26 @@
 import spade
 import asyncio
+import sys
 from monitor import MonitorAgent
 from analise import AnaliseAgent
 
 async def main():
+    if len(sys.argv) == 1:
+        ip = "10.0.6.1"
+        interface = "eth2"
+    elif len(sys.argv) == 2:
+        ip = sys.argv[1]
+        interface = "eth2"
+    elif len(sys.argv) >= 3:
+        ip = sys.argv[1]
+        interface = sys.argv[2]
 
-    analise = AnaliseAgent(jid="analise@10.0.6.1", password="NOPASSWORD")
+    print(f"Ip: {ip}\nInterface: {interface}")
+
+    analise = AnaliseAgent(jid=f"analise@{ip}", password="NOPASSWORD")
     await analise.start()
     
-    monitor = MonitorAgent(jid="monitor@10.0.6.1", password="NOPASSWORD")
+    monitor = MonitorAgent(jid=f"monitor@{ip}", password="NOPASSWORD", agenteAnalise=analise.jid, ip=ip,interface=interface)
     await monitor.start()
 
     try:

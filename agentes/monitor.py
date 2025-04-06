@@ -14,9 +14,12 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class MonitorAgent(Agent):
-    def __init__(self, jid, password):
+    def __init__(self, jid, password, agenteAnalise, ip,interface):
         super().__init__(jid=jid, password=password)
         self.packet_queue = asyncio.Queue()
+        self.agenteAnalise = agenteAnalise
+        self.ip = ip
+        self.interface = interface
 
     async def setup(self):
         print(GREEN + f"[Monitor] Agente Monitor a rodar." + RESET)
@@ -51,7 +54,7 @@ class MonitorAgent(Agent):
 
         def capture_packet(self):
             try:
-                packets = sniff(iface="eth2", timeout=1, filter="not src host 10.0.6.1")
+                packets = sniff(iface=self.agent.interface, timeout=1, filter=f"not src host {self.agent.ip}")
                 processed_packets = [self.packet_callback(pkt) for pkt in packets if self.packet_callback(pkt)]
                 return processed_packets if processed_packets else None  # Retorna uma lista de pacotes processados ou None
             except Exception as e:
@@ -74,7 +77,7 @@ class MonitorAgent(Agent):
                         i += 1
     
                 if packets:
-                    msg = Message(to="analise@10.0.6.1")
+                    msg = Message(to=f"{self.agent.agenteAnalise}")
                     msg.set_metadata("performative", "inform")
                     msg.body = jsonpickle.encode(packets)  # Enviar varios pacotes
                     
