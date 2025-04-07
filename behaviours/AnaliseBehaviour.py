@@ -19,26 +19,26 @@ class AnaliseBehaviour(CyclicBehaviour):
                 if msg:
 
                     if msg.metadata["performative"] == 'inform-fluxo':
-                         print(BLUE,"Received message from sender")
+                         print(BLUE + "Received message from sender" + RESET)
                          flow_info = jsonpickle.decode(msg.body)
                          flow_data = flow_info.get_flow_data()
                          if flow_data:
                              df = pd.DataFrame(flow_data)
-                             print(BLUE,"\nReceived DataFrame with shape:", df.shape)
-                             print(BLUE,"Sample data:")
-                             print(df.head())
+                             print(BLUE + "\nReceived DataFrame with shape: " + str(df.shape) + RESET)
+                             print(BLUE + "Sample data:" + RESET)
+                             print(BLUE + str(df.head()) + RESET)
  
                              try:
                                  # Predict using the loaded model
                                  predictions = self.agent.model.predict(df)
                                  df['prediction'] = predictions
                                  if 1 in predictions or "ANOMALY" in predictions:
-                                     print(BLUE,"\nAnomaly detected in the incoming flow!")
-                                     print(df[df['prediction'] == 'ANOMALY'])  # Show only anomalies
+                                     print(BLUE + "\nAnomaly detected in the incoming flow!" + RESET)
+                                     print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
                                  else:
-                                     print(BLUE,"\nAll clear. No anomalies detected.")
+                                     print(BLUE + "\nAll clear. No anomalies detected." + RESET)
                              except Exception as e:
-                                 print(BLUE,"Error during prediction:", str(e))
+                                 print(BLUE + "Error during prediction:", str(e) + RESET)
 
 
                     try:
@@ -54,12 +54,12 @@ class AnaliseBehaviour(CyclicBehaviour):
                             await self.analyze_packet(packet_data)
 
                     except Exception as e:
-                        print(RED + f"[Analise] Erro ao decodificar mensagem: {e}" + RESET)
+                        print(BLUE + f"[Analise] Erro ao decodificar mensagem: {e}" + RESET)
                 else:
                     print(BLUE + "[Analise] Nenhuma mensagem recebida" + RESET)
 
             except Exception as e:
-                print(RED + f"[Analise] Erro na análise: {e}" + RESET)
+                print(BLUE + f"[Analise] Erro na análise: {e}" + RESET)
 
         async def analyze_packet(self, packet):
             # Adiciona timestamp ao pacote

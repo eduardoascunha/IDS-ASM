@@ -20,7 +20,13 @@ class AnaliseAgent(Agent):
         self.signatures = ATTACK_SIGNATURES
         self.recent_packets = []
         self.alerts = []
-        self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
+
+        try:
+            self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
+        except Exception as e:
+            print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
+            raise  
+
         self.add_behaviour(RecvBehav())
 
     async def setup(self):
