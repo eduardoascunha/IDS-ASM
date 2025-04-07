@@ -8,7 +8,7 @@ import pandas as pd
 
 RED = '\033[31m'
 GREEN = '\033[32m'
-BLUE = '\033[34m'
+BLUE = '\033[35m'
 RESET = '\033[0m'
 
 class RecvBehav(CyclicBehaviour):
@@ -21,7 +21,7 @@ class RecvBehav(CyclicBehaviour):
                  flow_data = flow_info.get_flow_data()
                  if flow_data:
                      df = pd.DataFrame(flow_data)
-                     print(BLUE + "\nReceived DataFrame with shape:", df.shape + RESET)
+                     print(BLUE + "\nReceived DataFrame with shape:", str(df.shape) + RESET)
                      print(BLUE + "Sample data:" + RESET)
                      print(df.head())
  

@@ -2,14 +2,12 @@ import asyncio
 import spade
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
-from scapy.all import sniff, IP 
 from spade.message import Message
-import json
-import jsonpickle
-from datetime import datetime
+from misc.flow_info import FlowInfo
 
 from behaviours.MonitorBehaviour import MonitorBehaviour
 from behaviours.SendPacketBehaviour import SendPacketBehaviour
+from behaviours.MonitorFlowBehaviour import MonitorFlowBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -23,8 +21,10 @@ class MonitorAgent(Agent):
         self.agenteAnalise = agenteAnalise
         self.ip = ip
         self.interface = interface
+        self.flow_controller = FlowInfo()
 
     async def setup(self):
         print(GREEN + f"[Monitor] Agente Monitor a rodar." + RESET)
         self.add_behaviour(MonitorBehaviour())
         self.add_behaviour(SendPacketBehaviour())
+        self.add_behaviour(MonitorFlowBehaviour())
