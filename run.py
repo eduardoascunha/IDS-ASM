@@ -1,6 +1,7 @@
 import spade
 import asyncio
 import sys
+from agentes.cordenador import CordenadorAgent
 from agentes.monitor import MonitorAgent
 from agentes.analise import AnaliseAgent
 
@@ -17,7 +18,10 @@ async def main():
 
     print(f"Ip: {ip}\nInterface: {interface}")
 
-    analise = AnaliseAgent(jid=f"analise@{ip}", password="NOPASSWORD")
+    cordenador = CordenadorAgent(jid=f"cordenador@{ip}", password="NOPASSWORD")
+    await cordenador.start()
+
+    analise = AnaliseAgent(jid=f"analise@{ip}", password="NOPASSWORD", agenteCordenador=cordenador.jid)
     await analise.start()
 
     monitor = MonitorAgent(jid=f"monitor@{ip}", password="NOPASSWORD", agenteAnalise=analise.jid, ip=ip,interface=interface)

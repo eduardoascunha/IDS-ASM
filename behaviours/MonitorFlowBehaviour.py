@@ -18,7 +18,7 @@ class MonitorFlowBehaviour(CyclicBehaviour):
         flow_data = self.agent.flow_controller.get_flow_data()
         # Create DataFrame after capture is complete
         if flow_data:
-            msg = Message(to="analise@10.0.6.1")     # Instantiate the message
+            msg = Message(to=f"{self.agent.agenteAnalise}")     # Instantiate the message
             msg.set_metadata("performative", "inform-fluxo")  # Set the "inform" FIPA performative
             msg.body = jsonpickle.encode(self.agent.flow_controller)            # Set the message content
 

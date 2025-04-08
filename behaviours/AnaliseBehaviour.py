@@ -117,7 +117,7 @@ class AnaliseBehaviour(CyclicBehaviour):
                 alert = {
                     "type": "ping_flood",
                     "timestamp": current_time,
-                    "details": f"Detectados {len(recent_icmp)} pacotes ICMP em {self.agent.signatures['ping_flood']['conditions']['time_window']} segundo"
+                    "details": f"Detetados {len(recent_icmp)} pacotes ICMP em {self.agent.signatures['ping_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
@@ -134,7 +134,7 @@ class AnaliseBehaviour(CyclicBehaviour):
                 alert = {
                     "type": "syn_flood",
                     "timestamp": current_time,
-                    "details": f"Detectados {len(recent_tcp)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
+                    "details": f"Detetados {len(recent_tcp)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
@@ -152,7 +152,7 @@ class AnaliseBehaviour(CyclicBehaviour):
                 alert = {
                     "type": "dns_flood",
                     "timestamp": current_time,
-                    "details": f"Detectados {len(recent_dns)} pacotes DNS em {self.agent.signatures['dns_flood']['conditions']['time_window']} segundo"
+                    "details": f"Detetados {len(recent_dns)} pacotes DNS em {self.agent.signatures['dns_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
@@ -170,7 +170,7 @@ class AnaliseBehaviour(CyclicBehaviour):
                 alert = {
                     "type": "http_flood",
                     "timestamp": current_time,
-                    "details": f"Detectados {len(recent_http)} pacotes HTTP em {self.agent.signatures['http_flood']['conditions']['time_window']} segundo"
+                    "details": f"Detetados {len(recent_http)} pacotes HTTP em {self.agent.signatures['http_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)

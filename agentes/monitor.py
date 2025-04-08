@@ -15,7 +15,7 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class MonitorAgent(Agent):
-    def __init__(self, jid, password, agenteAnalise, ip,interface):
+    def __init__(self, jid, password, agenteAnalise, ip, interface):
         super().__init__(jid=jid, password=password)
         self.packet_queue = asyncio.Queue()
         self.agenteAnalise = agenteAnalise
@@ -27,4 +27,4 @@ class MonitorAgent(Agent):
         print(GREEN + f"[Monitor] Agente Monitor a rodar." + RESET)
         self.add_behaviour(MonitorBehaviour())
         self.add_behaviour(SendPacketBehaviour())
-        self.add_behaviour(MonitorFlowBehaviour())
+        #self.add_behaviour(MonitorFlowBehaviour())

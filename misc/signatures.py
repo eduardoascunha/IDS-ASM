@@ -1,6 +1,5 @@
 ATTACK_SIGNATURES = {
     "port_scan": {
-        "description": "Possível Port Scanning",
         "conditions": {
             "multiple_ports": True,
             "time_window": 5,  # segundos
@@ -8,7 +7,6 @@ ATTACK_SIGNATURES = {
         }
     },
     "ping_flood": {
-        "description": "Possível Ping Flood",
         "conditions": {
             "protocol": 1,  # ICMP
             "count_threshold": 10,
@@ -16,7 +14,6 @@ ATTACK_SIGNATURES = {
         }
     },
     "syn_flood": {
-        "description": "Possível SYN Flood",
         "conditions": {
             "protocol": 6,  # TCP
             "count_threshold": 20,
@@ -24,7 +21,6 @@ ATTACK_SIGNATURES = {
         }
     },
     "dns_flood": {
-        "description": "Possível DNS Flood Attack",
         "conditions": {
             "protocol": 17,  # UDP
             "dst_port": 53,  # Porta DNS
@@ -33,7 +29,6 @@ ATTACK_SIGNATURES = {
         }
     },
     "http_flood": {
-        "description": "Possível HTTP Flood Attack",
         "conditions": {
             "protocol": 6,  # TCP
             "dst_port": 80,  # Porta HTTP
