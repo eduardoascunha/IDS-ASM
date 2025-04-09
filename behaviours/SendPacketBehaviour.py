@@ -29,8 +29,6 @@ class SendPacketBehaviour(CyclicBehaviour):
                 
                 await self.send(msg)
                 print(GREEN + f"[Monitor] {len(packets)} pacotes enviados com sucesso" + RESET)
-            
-            await asyncio.sleep(0.1)
 
         except Exception as e:
             print(GREEN + f"[Monitor] Erro ao enviar pacotes: {e}" + RESET) 

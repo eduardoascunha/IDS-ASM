@@ -38,8 +38,8 @@ class RecvBehav(CyclicBehaviour):
                          print(BLUE + "Error during prediction:", str(e) + RESET)
  
              else:
-                 print(BLUE + "Did not receive any message after 60 seconds" + RESET)
-                 self.kill()
+                print(BLUE + "Did not receive any message after 60 seconds" + RESET)
+                #self.kill()
  
 async def on_end(self):
     await self.agent.stop()

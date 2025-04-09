@@ -333,13 +333,9 @@ class FlowInfo:
         self._flow_data.append(flow_entry)
 
     def capture_traffic(self, iface, timeout, filter):
-
-        """Start packet capture for the specified timeout period"""
-        print("Starting network traffic monitoring...")
-        sniff(prn=self.process_packet, store=0, timeout=timeout, iface=iface, filter=filter)
-
+        """
+        Start packet capture for the specified timeout period
         
-        if self._flow_data:
-            print("Timeout reached. Stopping capture.")
-        else:
-            print("No network flows captured during the monitoring period.")
+        by @nunorodriguess
+        """
+        sniff(prn=self.process_packet, store=0, timeout=timeout, iface=iface, filter=filter) 

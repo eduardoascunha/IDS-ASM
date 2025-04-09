@@ -18,7 +18,7 @@ class MonitorBehaviour(CyclicBehaviour):
                 # Coloca cada pacote individualmente na fila
                 for pkt in packet:
                     await self.agent.packet_queue.put(pkt)
-            await asyncio.sleep(0.1)
+
         except Exception as e:
             print(GREEN + f"[Monitor] Erro no comportamento: {e}" + RESET)
 

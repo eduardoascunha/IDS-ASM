@@ -40,21 +40,21 @@ class AnaliseBehaviour(CyclicBehaviour):
                              except Exception as e:
                                  print(BLUE + "Error during prediction:", str(e) + RESET)
 
+                    elif msg.metadata["performative"] == 'inform':
+                        try:
+                            packet_data = jsonpickle.decode(msg.body)
 
-                    try:
-                        packet_data = jsonpickle.decode(msg.body)
+                            # Se for uma lista de pacotes, processa um por um
+                            if isinstance(packet_data, list):
+                                print(BLUE + f"[Analise] {len(packet_data)} lista de pacotes recebidos, com {len(packet_data)} pacotes." + RESET)
+                                for packet in packet_data:
+                                    await self.analyze_packet(packet)
+                            else:
+                                print(BLUE + f"[Analise] Pacote recebido: {packet_data}" + RESET)
+                                await self.analyze_packet(packet_data)
 
-                        # Se for uma lista de pacotes, processa um por um
-                        if isinstance(packet_data, list):
-                            print(BLUE + f"[Analise] {len(packet_data)} lista de pacotes recebidos, com {len(packet_data)} pacotes." + RESET)
-                            for packet in packet_data:
-                                await self.analyze_packet(packet)
-                        else:
-                            print(BLUE + f"[Analise] Pacote recebido: {packet_data}" + RESET)
-                            await self.analyze_packet(packet_data)
-
-                    except Exception as e:
-                        print(BLUE + f"[Analise] Erro ao decodificar mensagem: {e}" + RESET)
+                        except Exception as e:
+                            print(BLUE + f"[Analise] Erro ao decodificar mensagem: {e}" + RESET)
                 else:
                     print(BLUE + "[Analise] Nenhuma mensagem recebida" + RESET)
 
