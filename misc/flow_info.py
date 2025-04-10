@@ -332,10 +332,11 @@ class FlowInfo:
         flow_entry = self.create_flow_entry(flow)
         self._flow_data.append(flow_entry)
 
-    def capture_traffic(self, iface, timeout, filter):
+    def capture_traffic(self, iface, timeout, filter=None):
         """
         Start packet capture for the specified timeout period
-        
-        by @nunorodriguess
         """
-        sniff(prn=self.process_packet, store=0, timeout=timeout, iface=iface, filter=filter) 
+        if filter == None: 
+            sniff(prn=self.process_packet, store=0, timeout=timeout, iface=iface)
+        else:
+            sniff(prn=self.process_packet, store=0, timeout=timeout, iface=iface, filter=filter) 

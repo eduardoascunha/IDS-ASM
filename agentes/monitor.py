@@ -15,11 +15,11 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class MonitorAgent(Agent):
-    def __init__(self, jid, password, agenteAnalise, ip, interface, flag_init):
+    def __init__(self, jid, password, agenteAnalise, interface, flag_init, ip=None):
         super().__init__(jid=jid, password=password)
         self.packet_queue = asyncio.Queue()
         self.agenteAnalise = agenteAnalise
-        self.ip = ip
+        #self.ip = ip
         self.interface = interface
         self.flow_controller = FlowInfo()
         self.flag_init = flag_init

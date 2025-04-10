@@ -1,7 +1,9 @@
 toDO:
 
-- agendes com anomalias fix e ainda ver o seu envio de alertas
+- agentes de cordenação: behaviour para tratar de alertas (com base em assinaturas tambem pro caso das assinaturas (-s) e apenas alerta para o caso de anomalias (-a))
 
-- agentes de cordenação: behaviour para tratar de alertas (como? com base em assinaturas tambem?)
+- ver envios de pacotes (do monitor)
 
-- ver envios de pacotes (principalmente o do monitor)
+- separar 2 ids, um de anomalias e outro de assinaturas
+
+- base de ataques para teste

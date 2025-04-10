@@ -37,7 +37,8 @@ class MonitorBehaviour(CyclicBehaviour):
 
     def capture_packet(self):
         try:
-            packets = sniff(iface=self.agent.interface, timeout=1, filter=f"not src host {self.agent.ip}")
+            #packets = sniff(iface=self.agent.interface, timeout=1, filter=f"not src host {self.agent.ip}")
+            packets = sniff(iface=self.agent.interface, timeout=1)
             processed_packets = [self.packet_callback(pkt) for pkt in packets if self.packet_callback(pkt)]
             return processed_packets if processed_packets else None  # Retorna uma lista de pacotes processados ou None
         except Exception as e:
