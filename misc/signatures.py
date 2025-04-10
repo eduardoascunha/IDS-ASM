@@ -44,29 +44,29 @@ DEFENSE_SIGNATURES = {
     "port_scan": {
         "action": "block_ip",
         "description": "Bloqueia IPs que escaneiam múltiplas portas em um curto intervalo de tempo.",
-        "command": lambda ip: f"iptables -A INPUT -s {ip} -j DROP"
+        "command": lambda ip: f"iptables -A INPUT -s {ip} -j DROP\n"
     },
     "ping_flood": {
         "action": "limit_icmp",
         "description": "Limita a taxa de pacotes ICMP para evitar ataques de flood por ping.",
         "command": lambda ip: f"iptables -A INPUT -p icmp -s {ip} -m limit --limit 1/second --limit-burst 4 -j ACCEPT\n"
-                              f"iptables -A INPUT -p icmp -s {ip} -j DROP"
+                              f"iptables -A INPUT -p icmp -s {ip} -j DROP\n"
     },
     "syn_flood": {
         "action": "tcp_syn_protection",
         "description": "Ativa proteção contra SYN flood usando regras que limitam conexões SYN por segundo.",
         "command": lambda ip: f"iptables -A INPUT -p tcp --syn -s {ip} -m limit --limit 5/second --limit-burst 10 -j ACCEPT\n"
-                              f"iptables -A INPUT -p tcp --syn -s {ip} -j DROP"
+                              f"iptables -A INPUT -p tcp --syn -s {ip} -j DROP\n"
     },
     "dns_flood": {
         "action": "udp_dns_rate_limit",
         "description": "Limita a taxa de requisições DNS por IP para evitar flood na porta 53/UDP.",
         "command": lambda ip: f"iptables -A INPUT -p udp --dport 53 -s {ip} -m limit --limit 5/second --limit-burst 10 -j ACCEPT\n"
-                              f"iptables -A INPUT -p udp --dport 53 -s {ip} -j DROP"
+                              f"iptables -A INPUT -p udp --dport 53 -s {ip} -j DROP\n"
     },
     "http_flood": {
         "action": "http_conn_limit",
         "description": "Restringe o número de conexões simultâneas HTTP de um único IP.",
-        "command": lambda ip: f"iptables -A INPUT -p tcp --dport 80 -s {ip} -m connlimit --connlimit-above 20 -j DROP"
+        "command": lambda ip: f"iptables -A INPUT -p tcp --dport 80 -s {ip} -m connlimit --connlimit-above 20 -j DROP\n"
     }
 }

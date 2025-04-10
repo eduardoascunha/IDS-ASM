@@ -18,8 +18,6 @@ class PreventionBehaviour(CyclicBehaviour):
 
                 self.tratar_alerta(ip,type)
 
-        self.agent.alerts = []
-
     def tratar_alerta(self, ip, type):
         action = self.agent.defense_signatures.get(type)
         

@@ -6,6 +6,7 @@ from misc.signatures import DEFENSE_SIGNATURES
 from behaviours.CS_ReceiveAlertsBehaviour import ReceiveAlertsBehaviour
 from behaviours.CS_PreventionBehaviour import PreventionBehaviour
 from behaviours.CA_ReceiveAnomaliaBehaviour import ReceiveAnomaliaBehaviour
+from behaviours.CS_ApagaAlertasBehaviour import ApagaAlertasBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -34,3 +35,7 @@ class CordenadorAgent(Agent):
             self.add_behaviour(ReceiveAlertsBehaviour())
             self.add_behaviour(PreventionBehaviour())
             self.add_behaviour(ReceiveAnomaliaBehaviour())
+        
+        self.add_behaviour(ApagaAlertasBehaviour(period=60))
+
+    
