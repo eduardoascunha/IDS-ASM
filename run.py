@@ -1,27 +1,43 @@
 import spade
 import asyncio
 import sys
+import os
 from agentes.cordenador import CordenadorAgent
 from agentes.monitor import MonitorAgent
 from agentes.analise import AnaliseAgent
 
 async def main():
-    ip = "10.0.6.1"
     interface1 = "eth2"
     interface2 = "eth3"
     interface3 = "eth4"
-    interface_list = [interface1, interface2, interface3]
 
     flag_init = 0
-    if len(sys.argv) > 1:
+    if len(sys.argv) < 1:
+        print("Uso: python3 run.py <flag>")
+        return
+    else:
+        os.system("sudo service openfire start")
+
         if sys.argv[1] == "-s":     # assinaturas
             flag_init = 1
+            ip = "10.0.6.1"
+            interface_list = [interface1, interface2, interface3]
+
         elif sys.argv[1] == "-a":   # anomalias
             flag_init = 2
-        else:                       # normal
+            ip = "10.0.5.1"
+            interface_list = [interface1]
+        
+        elif sys.argv[1] == "-asm":   # normal
             flag_init = 0 
+            ip = "10.0.6.1"
+            interface_list = [interface1, interface2, interface3]
 
-    print(f"Ip: {ip}\nInterface1: {interface1}\nInterface2: {interface2}\nInterface3: {interface3}")
+        else:
+            print("Flag inválida!")
+            return
+
+    print(f"Ip: {ip}\nInterfaces: {interface_list}")
 
     cordenador = CordenadorAgent(jid=f"cordenador@{ip}", password="NOPASSWORD")
     await cordenador.start()
@@ -34,7 +50,7 @@ async def main():
 
     try:
         while True:
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.1)
     except KeyboardInterrupt:
         await monitor.stop()
         await analise.stop()
