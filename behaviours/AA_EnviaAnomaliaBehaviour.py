@@ -9,14 +9,14 @@ GREEN = '\033[32m'
 BLUE = '\033[34m'
 RESET = '\033[0m'
 
-class EnviaAlertaBehaviour(CyclicBehaviour):
+class EnviaAnomaliaBehaviour(CyclicBehaviour):
     async def run(self):
-        if self.agent.alerts:
-            for alerta in self.agent.alerts:
-                print(BLUE + f"[Analise] Enviando alerta {alerta}" + RESET)
+        if self.agent.alerts_anomalias:
+            for alerta in self.agent.alerts_anomalias:
+                print(BLUE + f"[Analise] A enviar anomalia {alerta}" + RESET)
                 msg = Message(to=f"{self.agent.agenteCordenador}")
                 msg.set_metadata("performative", "inform")
                 msg.body = jsonpickle.encode(alerta)
                 await self.send(msg)
 
-        self.agent.alerts = []
+        self.agent.alerts_anomalias = []

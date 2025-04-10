@@ -5,9 +5,9 @@ from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 from misc.flow_info import FlowInfo
 
-from behaviours.MonitorBehaviour import MonitorBehaviour
-from behaviours.SendPacketBehaviour import SendPacketBehaviour
-from behaviours.MonitorFlowBehaviour import MonitorFlowBehaviour
+from behaviours.MS_MonitorBehaviour import MonitorBehaviour
+from behaviours.MS_SendPacketBehaviour import SendPacketBehaviour
+from behaviours.MA_MonitorFlowBehaviour import MonitorFlowBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -15,11 +15,10 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class MonitorAgent(Agent):
-    def __init__(self, jid, password, agenteAnalise, interface, flag_init, ip=None):
+    def __init__(self, jid, password, agenteAnalise, interface, flag_init):
         super().__init__(jid=jid, password=password)
         self.packet_queue = asyncio.Queue()
         self.agenteAnalise = agenteAnalise
-        #self.ip = ip
         self.interface = interface
         self.flow_controller = FlowInfo()
         self.flag_init = flag_init

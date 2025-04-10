@@ -6,9 +6,10 @@ from spade.message import Message
 from misc.signatures import ATTACK_SIGNATURES   
 import joblib
 
-from behaviours.AnaliseBehaviour import AnaliseBehaviour
-from behaviours.RecvBehav import RecvBehav
-from behaviours.EnviaAlertaBehaviour import EnviaAlertaBehaviour
+from behaviours.AS_AnaliseBehaviour import AnaliseBehaviour
+from behaviours.AS_EnviaAlertaBehaviour import EnviaAlertaBehaviour
+from behaviours.AA_FlowReceiveBehaviour import FlowReceiveBehaviour
+from behaviours.AA_EnviaAnomaliaBehaviour import EnviaAnomaliaBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -21,6 +22,7 @@ class AnaliseAgent(Agent):
         self.signatures = ATTACK_SIGNATURES
         self.recent_packets = []
         self.alerts = []
+        self.alerts_anomalias = []
         self.agenteCordenador = agenteCordenador
         self.flag_init = flag_init
 
@@ -37,10 +39,11 @@ class AnaliseAgent(Agent):
             self.add_behaviour(AnaliseBehaviour())
             
         elif self.flag_init == 2:
-            self.add_behaviour(RecvBehav())
+            self.add_behaviour(FlowReceiveBehaviour())
+            self.add_behaviour(EnviaAnomaliaBehaviour())
 
         else:
             self.add_behaviour(AnaliseBehaviour())
-            self.add_behaviour(RecvBehav())
+            self.add_behaviour(FlowReceiveBehaviour())
         
         self.add_behaviour(EnviaAlertaBehaviour())

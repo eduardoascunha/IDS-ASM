@@ -11,9 +11,9 @@ GREEN = '\033[32m'
 BLUE = '\033[35m'
 RESET = '\033[0m'
 
-class RecvBehav(CyclicBehaviour):
+class FlowReceiveBehaviour(CyclicBehaviour):
          async def run(self):
-             print(BLUE + "RecvBehav running" + RESET)
+             print(BLUE + "FlowReceiveBehaviour running" + RESET)
              msg = await self.receive(timeout=120)  # wait for a message for t seconds
              if msg and msg.metadata["performative"] == 'inform-fluxo':
                  print(BLUE + "Received message from sender" + RESET)
@@ -32,6 +32,7 @@ class RecvBehav(CyclicBehaviour):
                          if 1 in predictions or "ANOMALY" in predictions:
                              print(BLUE + "\nAnomaly detected in the incoming flow!" + RESET)
                              print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
+                             self.agent.alerts_anomalias.append((df['src_ip'], 'ANOMALY'))
                          else:
                              print(BLUE + "\nAll clear. No anomalies detected." + RESET)
                      except Exception as e:
@@ -39,7 +40,6 @@ class RecvBehav(CyclicBehaviour):
  
              else:
                 print(BLUE + "Did not receive any message after 60 seconds" + RESET)
-                #self.kill()
  
 async def on_end(self):
     await self.agent.stop()
