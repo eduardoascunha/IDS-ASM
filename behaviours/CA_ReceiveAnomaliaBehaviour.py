@@ -19,10 +19,13 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                 alert_data = jsonpickle.decode(msg.body)
                 print(RED + f"[Cordenador] Anomalia Recebida: {alert_data}" + RESET)
 
-                ip = alert_data['src_ip']
-
-                if (ip) not in self.agent.alerts_anomalia:
-                    self.agent.alerts_anomalia.append(ip)
+                if (alert_data) not in self.agent.alerts_anomalia:
+                    self.agent.alerts_anomalia.append(alert_data)
+                
+                # receve e atua
+                # ids anomaly based apenas avisa o administrador de rede
+                # avisar o administrador de rede
+                print(RED + f"[Cordenador] ADMINISTRADOR DE REDE, NOVO ALERTA!" + RESET)
 
             else:
                 print(RED + "[Cordenador] Nenhum alerta recebido" + RESET)

@@ -24,7 +24,7 @@ async def main():
             flag_init = 1
             interface_list = [interface1, interface2, interface3]
             
-            cordenador = CordenadorAgent(jid=f"cordenadorASSINATURA@{ip}", password="NOPASSWORD")
+            cordenador = CordenadorAgent(jid=f"cordenadorASSINATURA@{ip}", password="NOPASSWORD", flag_init=flag_init)
             await cordenador.start()
 
             analise = AnaliseAgent(jid=f"analiseASSINATURA@{ip}", password="NOPASSWORD", agenteCordenador=cordenador.jid, flag_init=flag_init)
@@ -37,7 +37,7 @@ async def main():
             flag_init = 2
             interface_list = [interface1]
             
-            cordenador = CordenadorAgent(jid=f"cordenadorANOMALIA@{ip}", password="NOPASSWORD")
+            cordenador = CordenadorAgent(jid=f"cordenadorANOMALIA@{ip}", password="NOPASSWORD", flag_init=flag_init)
             await cordenador.start()
 
             analise = AnaliseAgent(jid=f"analiseANOMALIA@{ip}", password="NOPASSWORD", agenteCordenador=cordenador.jid, flag_init=flag_init)
@@ -49,7 +49,7 @@ async def main():
         elif sys.argv[1] == "-asm":   # normal
             flag_init = 0 
             interface_list = [interface1, interface2, interface3]
-            cordenador = CordenadorAgent(jid=f"cordenadorNORMAL@{ip}", password="NOPASSWORD")
+            cordenador = CordenadorAgent(jid=f"cordenadorNORMAL@{ip}", password="NOPASSWORD", flag_init=flag_init)
             await cordenador.start()
 
             analise = AnaliseAgent(jid=f"analiseNORMAL@{ip}", password="NOPASSWORD", agenteCordenador=cordenador.jid, flag_init=flag_init)

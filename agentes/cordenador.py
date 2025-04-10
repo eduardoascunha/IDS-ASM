@@ -1,8 +1,11 @@
 import asyncio
 import spade
 from spade.agent import Agent
+from misc.signatures import DEFENSE_SIGNATURES
 
-from behaviours.ReceiveAlertsBehaviour import ReceiveAlertsBehaviour
+from behaviours.CS_ReceiveAlertsBehaviour import ReceiveAlertsBehaviour
+from behaviours.CS_PreventionBehaviour import PreventionBehaviour
+from behaviours.CA_ReceiveAnomaliaBehaviour import ReceiveAnomaliaBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -15,21 +18,19 @@ class CordenadorAgent(Agent):
         self.alerts = []
         self.alerts_anomalias = []
         self.flag_init = flag_init
+        self.defense_signatures = DEFENSE_SIGNATURES
 
     async def setup(self):
         print(RED + f"[Cordenador] Agente Cordenador a rodar." + RESET)
-        self.add_behaviour(ReceiveAlertsBehaviour())
-        self.add_behaviour(ReceiveAnomaliaBehaviour())
 
-        if self.flag_init == 1:
-            #self.add_behaviour(MonitorBehaviour())
-            print("a")
+        if self.flag_init == 1: # assinatura
+            self.add_behaviour(ReceiveAlertsBehaviour())
+            self.add_behaviour(PreventionBehaviour())
         
-        elif self.flag_init == 2:
-            #self.add_behaviour(MonitorFlowBehaviour())
-            self.add_behaviour(CordenadorAnomaliaBehaviour())
-            print("a")
+        elif self.flag_init == 2: # anomalia
+            self.add_behaviour(ReceiveAnomaliaBehaviour())
 
-        else:
-            #self.add_behaviour(MonitorBehaviour())
-            print("a")
+        else: # asm
+            self.add_behaviour(ReceiveAlertsBehaviour())
+            self.add_behaviour(PreventionBehaviour())
+            self.add_behaviour(ReceiveAnomaliaBehaviour())

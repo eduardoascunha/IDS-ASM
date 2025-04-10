@@ -32,7 +32,7 @@ class FlowReceiveBehaviour(CyclicBehaviour):
                          if 1 in predictions or "ANOMALY" in predictions:
                              print(BLUE + "\nAnomaly detected in the incoming flow!" + RESET)
                              print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
-                             self.agent.alerts_anomalias.append((df['src_ip'], 'ANOMALY'))
+                             self.agent.alerts_anomalias.append((df, 'ANOMALY')) #toDo VERIFICAR ISTO
                          else:
                              print(BLUE + "\nAll clear. No anomalies detected." + RESET)
                      except Exception as e:

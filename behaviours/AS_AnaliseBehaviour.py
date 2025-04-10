@@ -75,10 +75,10 @@ class AnaliseBehaviour(CyclicBehaviour):
 
             # Analisa assinaturas
             await self.check_port_scan(packet)
-            await self.check_ping_flood()
-            await self.check_syn_flood()
-            await self.check_dns_flood()
-            await self.check_http_flood()
+            await self.check_ping_flood(packet)
+            await self.check_syn_flood(packet)
+            await self.check_dns_flood(packet)
+            await self.check_http_flood(packet)
 
         async def check_port_scan(self, packet):
             if packet.get("src_port") is None:
@@ -105,7 +105,12 @@ class AnaliseBehaviour(CyclicBehaviour):
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
-        async def check_ping_flood(self):
+        async def check_ping_flood(self, packet):
+            if packet.get("src_port") is None:
+                return
+
+            src_ip = packet["src_ip"]
+
             current_time = asyncio.get_event_loop().time()
             recent_icmp = [
                 p for p in self.agent.recent_packets
@@ -116,13 +121,19 @@ class AnaliseBehaviour(CyclicBehaviour):
             if len(recent_icmp) >= self.agent.signatures["ping_flood"]["conditions"]["count_threshold"]:
                 alert = {
                     "type": "ping_flood",
+                    "src_ip": src_ip,
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_icmp)} pacotes ICMP em {self.agent.signatures['ping_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
-        async def check_syn_flood(self):
+        async def check_syn_flood(self, packet):
+            if packet.get("src_port") is None:
+                return
+
+            src_ip = packet["src_ip"]
+
             current_time = asyncio.get_event_loop().time()
             recent_tcp = [
                 p for p in self.agent.recent_packets
@@ -133,13 +144,19 @@ class AnaliseBehaviour(CyclicBehaviour):
             if len(recent_tcp) >= self.agent.signatures["syn_flood"]["conditions"]["count_threshold"]:
                 alert = {
                     "type": "syn_flood",
+                    "src_ip": src_ip,
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_tcp)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
-        async def check_dns_flood(self):
+        async def check_dns_flood(self, packet):
+            if packet.get("src_port") is None:
+                return
+
+            src_ip = packet["src_ip"]
+
             current_time = asyncio.get_event_loop().time()
             recent_dns = [
                 p for p in self.agent.recent_packets
@@ -151,13 +168,19 @@ class AnaliseBehaviour(CyclicBehaviour):
             if len(recent_dns) >= self.agent.signatures["dns_flood"]["conditions"]["count_threshold"]:
                 alert = {
                     "type": "dns_flood",
+                    "src_ip": src_ip,
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_dns)} pacotes DNS em {self.agent.signatures['dns_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)
 
-        async def check_http_flood(self):
+        async def check_http_flood(self, packet):
+            if packet.get("src_port") is None:
+                return
+
+            src_ip = packet["src_ip"]
+
             current_time = asyncio.get_event_loop().time()
             recent_http = [
                 p for p in self.agent.recent_packets
@@ -169,6 +192,7 @@ class AnaliseBehaviour(CyclicBehaviour):
             if len(recent_http) >= self.agent.signatures["http_flood"]["conditions"]["count_threshold"]:
                 alert = {
                     "type": "http_flood",
+                    "src_ip": src_ip,
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_http)} pacotes HTTP em {self.agent.signatures['http_flood']['conditions']['time_window']} segundo"
                 }

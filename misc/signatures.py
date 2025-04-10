@@ -42,44 +42,31 @@ ATTACK_SIGNATURES = {
 # assinaturas de defesas
 DEFENSE_SIGNATURES = {
     "port_scan": {
-        "response": [
-            "Registar o IP atacante em logs.",
-            "Adicionar regra na firewall para bloquear IP temporariamente:",
-            "iptables -A INPUT -s {attacker_ip} -j DROP",
-            "Enviar alerta ao administrador."
-        ]
+        "action": "block_ip",
+        "description": "Bloqueia IPs que escaneiam múltiplas portas em um curto intervalo de tempo.",
+        "command": lambda ip: f"iptables -A INPUT -s {ip} -j DROP"
     },
     "ping_flood": {
-        "response": [
-            "Limitar taxa de pacotes ICMP com iptables:",
-            "iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst 5 -j ACCEPT",
-            "iptables -A INPUT -p icmp -j DROP",
-            "Registrar o IP atacante."
-        ]
+        "action": "limit_icmp",
+        "description": "Limita a taxa de pacotes ICMP para evitar ataques de flood por ping.",
+        "command": lambda ip: f"iptables -A INPUT -p icmp -s {ip} -m limit --limit 1/second --limit-burst 4 -j ACCEPT\n"
+                              f"iptables -A INPUT -p icmp -s {ip} -j DROP"
     },
     "syn_flood": {
-        "response": [
-            "Ativar SYN cookies no sistema:",
-            "sysctl -w net.ipv4.tcp_syncookies=1",
-            "Adicionar regra na firewall para limitar conexões:",
-            "iptables -A INPUT -p tcp --syn -m limit --limit 10/s --limit-burst 20 -j ACCEPT",
-            "iptables -A INPUT -p tcp --syn -j DROP"
-        ]
+        "action": "tcp_syn_protection",
+        "description": "Ativa proteção contra SYN flood usando regras que limitam conexões SYN por segundo.",
+        "command": lambda ip: f"iptables -A INPUT -p tcp --syn -s {ip} -m limit --limit 5/second --limit-burst 10 -j ACCEPT\n"
+                              f"iptables -A INPUT -p tcp --syn -s {ip} -j DROP"
     },
     "dns_flood": {
-        "response": [
-            "Limitar taxa de pacotes UDP para porta 53:",
-            "iptables -A INPUT -p udp --dport 53 -m limit --limit 10/s --limit-burst 15 -j ACCEPT",
-            "iptables -A INPUT -p udp --dport 53 -j DROP",
-            "Registrar origem e notificar administrador."
-        ]
+        "action": "udp_dns_rate_limit",
+        "description": "Limita a taxa de requisições DNS por IP para evitar flood na porta 53/UDP.",
+        "command": lambda ip: f"iptables -A INPUT -p udp --dport 53 -s {ip} -m limit --limit 5/second --limit-burst 10 -j ACCEPT\n"
+                              f"iptables -A INPUT -p udp --dport 53 -s {ip} -j DROP"
     },
     "http_flood": {
-        "response": [
-            "Bloquear IP atacante com iptables:",
-            "iptables -A INPUT -p tcp --dport 80 -s {attacker_ip} -j DROP",
-            "Opcional: usar fail2ban para automatizar bloqueios futuros.",
-            "Enviar notificação ao administrador."
-        ]
+        "action": "http_conn_limit",
+        "description": "Restringe o número de conexões simultâneas HTTP de um único IP.",
+        "command": lambda ip: f"iptables -A INPUT -p tcp --dport 80 -s {ip} -m connlimit --connlimit-above 20 -j DROP"
     }
 }

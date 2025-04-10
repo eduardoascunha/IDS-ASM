@@ -15,7 +15,7 @@ class EnviaAnomaliaBehaviour(CyclicBehaviour):
             for alerta in self.agent.alerts_anomalias:
                 print(BLUE + f"[Analise] A enviar anomalia {alerta}" + RESET)
                 msg = Message(to=f"{self.agent.agenteCordenador}")
-                msg.set_metadata("performative", "inform")
+                msg.set_metadata("performative", "inform-fluxo")
                 msg.body = jsonpickle.encode(alerta)
                 await self.send(msg)
 
