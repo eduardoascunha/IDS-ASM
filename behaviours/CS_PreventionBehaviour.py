@@ -14,9 +14,12 @@ class PreventionBehaviour(CyclicBehaviour):
     async def run(self):
         if self.agent.alerts:
             for ip,type in self.agent.alerts:
-                print(RED + f"[Cordenador] A resolver alerta {ip} - {type}" + RESET)
-
-                self.tratar_alerta(ip,type)
+                if (ip,type) not in self.agent.alerts_resolved:
+                    print(RED + f"[Cordenador] A resolver alerta {ip} - {type}" + RESET)
+                    self.tratar_alerta(ip,type)
+                    self.agent.alerts_resolved.append((ip,type))
+                #else:
+                #    print(RED + f"[Cordenador] Alerta {ip} - {type} já resolvido" + RESET)
 
     def tratar_alerta(self, ip, type):
         action = self.agent.defense_signatures.get(type)
@@ -25,8 +28,8 @@ class PreventionBehaviour(CyclicBehaviour):
             print(RED + f"[Defesa] {action['description']} em execução para o IP {ip}." + RESET)
             command = action["command"](ip)
             
+            print(RED + f"[Cordenador -> Firewall] A executar: {command}" + RESET)
             for line in command.split("\n"):
-                print(RED + f"[Cordenador -> Firewall] A executar: {line}" + RESET)
                 subprocess.run(line, shell=True)
                 
         else:

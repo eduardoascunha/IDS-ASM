@@ -17,12 +17,13 @@ class ReceiveAlertsBehaviour(CyclicBehaviour):
             msg = await self.receive(timeout=10)
             if msg:
                 alert_data = jsonpickle.decode(msg.body)
-                print(RED + f"[Cordenador] Alerta Recebido: {alert_data}" + RESET)
+                #print(RED + f"[Cordenador] Alerta Recebido: {alert_data}" + RESET)
 
                 ip = alert_data['src_ip']
                 type = alert_data['type']
 
                 if (ip,type) not in self.agent.alerts:
+                    print(RED + f"[Cordenador] Alerta Novo Recebido: {alert_data}" + RESET)
                     self.agent.alerts.append((ip,type))
 
             else:

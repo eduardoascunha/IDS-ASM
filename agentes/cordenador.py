@@ -17,6 +17,7 @@ class CordenadorAgent(Agent):
     def __init__(self, jid, password, flag_init):
         super().__init__(jid=jid, password=password)
         self.alerts = []
+        self.alerts_resolved = []
         self.alerts_anomalias = []
         self.flag_init = flag_init
         self.defense_signatures = DEFENSE_SIGNATURES
@@ -36,6 +37,6 @@ class CordenadorAgent(Agent):
             self.add_behaviour(PreventionBehaviour())
             self.add_behaviour(ReceiveAnomaliaBehaviour())
         
-        self.add_behaviour(ApagaAlertasBehaviour(period=60))
+        self.add_behaviour(ApagaAlertasBehaviour(period=3600)) # 1h
 
     

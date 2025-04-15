@@ -17,34 +17,11 @@ class AnaliseBehaviour(CyclicBehaviour):
                 # Recebe mensagem do agente monitor
                 msg = await self.receive(timeout=10)
                 if msg:
-
-                    if msg.metadata["performative"] == 'inform-fluxo':
-                         print(BLUE + "Received message from sender" + RESET)
-                         flow_info = jsonpickle.decode(msg.body)
-                         flow_data = flow_info.get_flow_data()
-                         if flow_data:
-                             df = pd.DataFrame(flow_data)
-                             print(BLUE + "\nReceived DataFrame with shape: " + str(df.shape) + RESET)
-                             print(BLUE + "Sample data:" + RESET)
-                             print(BLUE + str(df.head()) + RESET)
- 
-                             try:
-                                 # Predict using the loaded model
-                                 predictions = self.agent.model.predict(df)
-                                 df['prediction'] = predictions
-                                 if 1 in predictions or "ANOMALY" in predictions:
-                                     print(BLUE + "\nAnomaly detected in the incoming flow!" + RESET)
-                                     print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
-                                 else:
-                                     print(BLUE + "\nAll clear. No anomalies detected." + RESET)
-                             except Exception as e:
-                                 print(BLUE + "Error during prediction:", str(e) + RESET)
-
-                    elif msg.metadata["performative"] == 'inform':
+                    if msg.metadata["performative"] == 'inform':
                         try:
                             packet_data = jsonpickle.decode(msg.body)
 
-                            # Se for uma lista de pacotes, processa um por um
+                            # se for uma lista de pacotes, processa um a um
                             if isinstance(packet_data, list):
                                 print(BLUE + f"[Analise] {len(packet_data)} lista de pacotes recebidos, com {len(packet_data)} pacotes." + RESET)
                                 for packet in packet_data:
@@ -60,6 +37,7 @@ class AnaliseBehaviour(CyclicBehaviour):
 
             except Exception as e:
                 print(BLUE + f"[Analise] Erro na análise: {e}" + RESET)
+
 
         async def analyze_packet(self, packet):
             # Adiciona timestamp ao pacote
@@ -79,6 +57,7 @@ class AnaliseBehaviour(CyclicBehaviour):
             await self.check_syn_flood(packet)
             await self.check_dns_flood(packet)
             await self.check_http_flood(packet)
+
 
         async def check_port_scan(self, packet):
             if packet.get("src_port") is None:
@@ -106,8 +85,8 @@ class AnaliseBehaviour(CyclicBehaviour):
                 self.agent.alerts.append(alert)
 
         async def check_ping_flood(self, packet):
-            if packet.get("src_port") is None:
-                return
+            #if packet.get("src_port") is None:
+            #    return
 
             src_ip = packet["src_ip"]
 
@@ -133,6 +112,7 @@ class AnaliseBehaviour(CyclicBehaviour):
                 return
 
             src_ip = packet["src_ip"]
+            dst_port = packet["dst_port"]
 
             current_time = asyncio.get_event_loop().time()
             recent_tcp = [
@@ -141,12 +121,16 @@ class AnaliseBehaviour(CyclicBehaviour):
                 and current_time - p["timestamp"] <= self.agent.signatures["syn_flood"]["conditions"]["time_window"]
             ]
 
-            if len(recent_tcp) >= self.agent.signatures["syn_flood"]["conditions"]["count_threshold"]:
+            # para portas unicas 
+            # multiplas portas é um port scan
+            recent_syn = [p for p in recent_tcp if p["dst_port"] == dst_port]
+
+            if len(recent_syn) >= self.agent.signatures["syn_flood"]["conditions"]["count_threshold"]:
                 alert = {
                     "type": "syn_flood",
                     "src_ip": src_ip,
                     "timestamp": current_time,
-                    "details": f"Detetados {len(recent_tcp)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
+                    "details": f"Detetados {len(recent_syn)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
                 }
                 print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
                 self.agent.alerts.append(alert)

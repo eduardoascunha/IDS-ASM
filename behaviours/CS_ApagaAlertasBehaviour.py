@@ -13,3 +13,7 @@ class ApagaAlertasBehaviour(PeriodicBehaviour):
         if self.agent.alerts:
             print(RED + f"[Cordenador] A apagar alertas!" + RESET)
             self.agent.alerts = []
+
+        #if self.agent.alerts_resolved:
+        #    print(RED + f"[Cordenador] A apagar alertas resolvidos!" + RESET)
+        #    self.agent.alerts_resolved = []
