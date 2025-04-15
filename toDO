@@ -1,12 +1,12 @@
 toDO:
 
-- agentes de cordenação: behaviour para tratar de alertas (com base em assinaturas tambem pro caso das assinaturas (-s) e apenas alerta para o caso de anomalias (-a))
-
 - ver envios de pacotes (do monitor)
 
 - ataques que o modelo de anomalias detete
 
-- fix para todos os altertas levarem o ip e o tipo
+- passar pra CSV no flow
+
+- corrigir IPS
 
 
 

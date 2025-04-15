@@ -1,8 +1,6 @@
 import spade
 from spade.behaviour import PeriodicBehaviour
 from spade.message import Message
-import asyncio
-import jsonpickle
 
 RED = '\033[31m'
 GREEN = '\033[32m'
