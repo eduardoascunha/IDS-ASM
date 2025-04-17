@@ -27,7 +27,8 @@ class AnaliseAgent(Agent):
         self.flag_init = flag_init
 
         try:
-            self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
+            #self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
+            self.model = joblib.load('anomalyModel/isolation_model.pkl')
         except Exception as e:
             print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
             raise  

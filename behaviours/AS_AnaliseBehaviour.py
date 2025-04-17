@@ -112,18 +112,13 @@ class AnaliseBehaviour(CyclicBehaviour):
                 return
 
             src_ip = packet["src_ip"]
-            dst_port = packet["dst_port"]
 
             current_time = asyncio.get_event_loop().time()
-            recent_tcp = [
+            recent_syn = [
                 p for p in self.agent.recent_packets
                 if p["protocol"] == 6  # TCP
                 and current_time - p["timestamp"] <= self.agent.signatures["syn_flood"]["conditions"]["time_window"]
             ]
-
-            # para portas unicas 
-            # multiplas portas é um port scan
-            recent_syn = [p for p in recent_tcp if p["dst_port"] == dst_port]
 
             if len(recent_syn) >= self.agent.signatures["syn_flood"]["conditions"]["count_threshold"]:
                 alert = {

@@ -1,12 +1,6 @@
 toDO:
 
-- ver envios de pacotes (do monitor)
-
 - ataques que o modelo de anomalias detete
-
-- PORQUE É QUE DE VEZ EM QUANDO NAO APANHA O NMAP??
-
-- anomaly: [Cordenador] Erro ao receber alerta: 'NoneType' object has no attribute 'metadata'
 
 
 Ataques:
@@ -25,5 +19,5 @@ Ver iptables:
 Limpar iptables:
 -> sudo iptables -F
 
-TCPDUMP - pra verificar prevencao de ataques flood:
+TCPDUMP: pra verificar defesa de ataques flood:
 -> sudo tcpdump -i eth2 udp port 53
