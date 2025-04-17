@@ -45,10 +45,18 @@ class FlowReceiveBehaviour(CyclicBehaviour):
                         predictions = np.where(predictions == 1, "BENIGN", "ANOMALY")
 
                         df['prediction'] = predictions
+                        
                         if "ANOMALY" in predictions:
                             print(BLUE + "\n[Analise] Anomalia detetada no fluxo!" + RESET)
                             print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
-                            self.agent.alerts_anomalias.append(df) #toDo VERIFICAR ISTO
+                            
+                            #self.agent.alerts_anomalias.append(df) 
+                            self.agent.alerts_anomalias.append({
+                                'Destination Port': df["Destination Port"],  
+                                'Flow Duration': df["Flow Duration"],
+                                'Total Fwd Packets': df["Total Fwd Packets"]  
+                            })
+
                         else:
                             print(BLUE + "\n[Analise] Tudo Ok. Nenhuma anomalia detetada." + RESET)
                     

@@ -1,6 +1,10 @@
 toDO:
 
-- ataques que o modelo de anomalias detete
+- modelo de anomalias detetar anomalias e nao tudo o que aparece
+
+- ver melhor o objeto que esta a ser enviado ao agente cordenador em caso de anomalias
+- de forma a que seja possivel nao haver repetidas
+- porque é que esse envio esta a demorar tanto tempo a acontecer??
 
 
 Ataques:

@@ -24,11 +24,12 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                     alert_data = jsonpickle.decode(msg.body)
                     print(RED + f"[Cordenador] Anomalia Recebida: {alert_data}" + RESET)
 
-                    if (alert_data) not in self.agent.alerts_anomalia:
-                        self.agent.alerts_anomalia.append(alert_data)
+                    #if alert_data not in self.agent.alerts_anomalias:
+                    
+                    self.agent.alerts_anomalias.append(alert_data)
                 
                     # ids anomaly based apenas avisa o administrador de rede
-                    self.enviar_email_alerta(alert_data)
+                    #self.enviar_email_alerta(alert_data) # nao consegue enviar email por estar a ser rodado no core
 
             else:
                 print(RED + "[Cordenador] Nenhum alerta recebido" + RESET)
