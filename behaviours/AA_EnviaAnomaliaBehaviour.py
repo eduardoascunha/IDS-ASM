@@ -20,7 +20,7 @@ class EnviaAnomaliaBehaviour(CyclicBehaviour):
                     msg.body = jsonpickle.encode(alerta)
                     await self.send(msg)
 
+                self.agent.alerts_anomalias = []
+
         except Exception as e:
             print(BLUE + f"[Analise] Erro ao enviar anomalia: {e}" + RESET)
-
-        self.agent.alerts_anomalias = []

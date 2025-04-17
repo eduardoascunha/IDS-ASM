@@ -29,7 +29,7 @@ class FlowReceiveBehaviour(CyclicBehaviour):
 
                     try:
                         # Save the DataFrame to a CSV file
-                        file_path = "anomalyModel/data/csvs/flow_data5.csv"
+                        file_path = "anomalyModel/data/csvs/flow_data_clean.csv"
 
                         if not os.path.exists(file_path):
                             df.to_csv(file_path, index=False)
@@ -50,11 +50,28 @@ class FlowReceiveBehaviour(CyclicBehaviour):
                             print(BLUE + "\n[Analise] Anomalia detetada no fluxo!" + RESET)
                             print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
                             
-                            #self.agent.alerts_anomalias.append(df) 
                             self.agent.alerts_anomalias.append({
-                                'Destination Port': df["Destination Port"],  
+                                'Destination Port': df["Destination Port"],
                                 'Flow Duration': df["Flow Duration"],
-                                'Total Fwd Packets': df["Total Fwd Packets"]  
+                                'Total Fwd Packets': df["Total Fwd Packets"],
+                                'Total Backward Packets': df["Total Backward Packets"],
+                                'Total Length of Fwd Packets': df["Total Length of Fwd Packets"],
+                                'Total Length of Bwd Packets': df["Total Length of Bwd Packets"],
+                                'Flow Bytes/s': df["Flow Bytes/s"],
+                                'Flow Packets/s': df["Flow Packets/s"],
+                                'Fwd Packet Length Std': df["Fwd Packet Length Std"],
+                                'Bwd Packet Length Std': df["Bwd Packet Length Std"],
+                                'Packet Length Variance': df["Packet Length Variance"],
+                                'SYN Flag Count': df["SYN Flag Count"],
+                                'RST Flag Count': df["RST Flag Count"],
+                                'FIN Flag Count': df["FIN Flag Count"],
+                                'ACK Flag Count': df["ACK Flag Count"],
+                                'Flow IAT Mean': df["Flow IAT Mean"],
+                                'Flow IAT Std': df["Flow IAT Std"],
+                                'Down/Up Ratio': df["Down/Up Ratio"],
+                                'Average Packet Size': df["Average Packet Size"],
+                                'Active Mean': df["Active Mean"],
+                                'Idle Mean': df["Idle Mean"]
                             })
 
                         else:

@@ -11,12 +11,16 @@ RESET = '\033[0m'
 
 class EnviaAlertaBehaviour(CyclicBehaviour):
     async def run(self):
-        if self.agent.alerts:
-            for alerta in self.agent.alerts:
-                print(BLUE + f"[Analise] A enviar alerta {alerta}" + RESET)
-                msg = Message(to=f"{self.agent.agenteCordenador}")
-                msg.set_metadata("performative", "inform")
-                msg.body = jsonpickle.encode(alerta)
-                await self.send(msg)
+        try:
+            if self.agent.alerts:
+                for alerta in self.agent.alerts:
+                    print(BLUE + f"[Analise] A enviar alerta {alerta}" + RESET)
+                    msg = Message(to=f"{self.agent.agenteCordenador}")
+                    msg.set_metadata("performative", "inform")
+                    msg.body = jsonpickle.encode(alerta)
+                    await self.send(msg)
 
-        self.agent.alerts = []
+                self.agent.alerts = []
+                
+        except Exception as e:
+            print(BLUE + f"[Analise] Erro ao enviar alerta: {e}" + RESET)

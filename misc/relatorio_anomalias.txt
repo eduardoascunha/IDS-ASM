@@ -1,0 +1,46 @@
+=== Anomalia Recebida - 2025-04-17 23:58:37 ===
+Destination Port: 0        0 | 1        0 | 2        0 | 3        0 | 4    55146 | 5    55146 | 6    55160 | 7    55160 | 8    55166 | 9    55166 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    2 | 3    2 | 4    0 | 5    0 | 6    0 | 7    0 | 8    0 | 9    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    2 | 3    2 | 4    1 | 5    1 | 6    1 | 7    1 | 8    1 | 9    1 | Name: Total Fwd Packets, dtype: int64
+Total Backward Packets: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    1 | 6    0 | 7    1 | 8    0 | 9    1 | Name: Total Backward Packets, dtype: int64
+Total Length of Fwd Packets: 0     82 | 1     82 | 2    164 | 3    164 | 4    279 | 5    279 | 6    275 | 7    275 | 8    276 | 9    276 | Name: Total Length of Fwd Packets, dtype: int64
+Total Length of Bwd Packets: 0     0 | 1     0 | 2     0 | 3     0 | 4     0 | 5    66 | 6     0 | 7    66 | 8     0 | 9    66 | Name: Total Length of Bwd Packets, dtype: int64
+Flow Bytes/s: 0    0.000000e+00 | 1    0.000000e+00 | 2    8.198526e+01 | 3    8.197814e+01 | 4    0.000000e+00 | 5    1.607817e+07 | 6    0.000000e+00 | 7    2.344685e+07 | 8    0.000000e+00 | 9    1.463726e+07 | Name: Flow Bytes/s, dtype: float64
+Flow Packets/s: 0         0.000000 | 1         0.000000 | 2         0.999820 | 3         0.999733 | 4         0.000000 | 5     93206.755556 | 6         0.000000 | 7    137518.163934 | 8         0.000000 | 9     85598.040816 | Name: Flow Packets/s, dtype: float64
+Fwd Packet Length Std: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | 7    0.0 | 8    0.0 | 9    0.0 | Name: Fwd Packet Length Std, dtype: float64
+Bwd Packet Length Std: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | 7    0.0 | 8    0.0 | 9    0.0 | Name: Bwd Packet Length Std, dtype: float64
+Packet Length Variance: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | 7    0.0 | 8    0.0 | 9    0.0 | Name: Packet Length Variance, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | 8    0 | 9    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | 8    0 | 9    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | 8    0 | 9    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    1 | 5    2 | 6    1 | 7    2 | 8    1 | 9    2 | Name: ACK Flag Count, dtype: int64
+Flow IAT Mean: 0    0.000000 | 1    0.000000 | 2    2.000360 | 3    2.000533 | 4    0.000000 | 5    0.000021 | 6    0.000000 | 7    0.000015 | 8    0.000000 | 9    0.000023 | Name: Flow IAT Mean, dtype: float64
+Flow IAT Std: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | 7    0.0 | 8    0.0 | 9    0.0 | Name: Flow IAT Std, dtype: float64
+Down/Up Ratio: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    1.0 | 6    0.0 | 7    1.0 | 8    0.0 | 9    1.0 | Name: Down/Up Ratio, dtype: float64
+Average Packet Size: 0     82.0 | 1     82.0 | 2     82.0 | 3     82.0 | 4    279.0 | 5    172.5 | 6    275.0 | 7    170.5 | 8    276.0 | 9    171.0 | Name: Average Packet Size, dtype: float64
+Active Mean: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | 8    0 | 9    0 | Name: Active Mean, dtype: int64
+Idle Mean: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | 8    0 | 9    0 | Name: Idle Mean, dtype: int64
+
+=== Anomalia Recebida - 2025-04-17 23:58:42 ===
+Destination Port: 0    55160 | 1    55146 | 2    55166 | 3        0 | 4        0 | 5        0 | 6        0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    2 | 6    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | 3    1 | 4    1 | 5    2 | 6    2 | Name: Total Fwd Packets, dtype: int64
+Total Backward Packets: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: Total Backward Packets, dtype: int64
+Total Length of Fwd Packets: 0     66 | 1     66 | 2     66 | 3     82 | 4     82 | 5    164 | 6    164 | Name: Total Length of Fwd Packets, dtype: int64
+Total Length of Bwd Packets: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: Total Length of Bwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1     0.000000 | 2     0.000000 | 3     0.000000 | 4     0.000000 | 5    81.985946 | 6    81.976986 | Name: Flow Bytes/s, dtype: float64
+Flow Packets/s: 0    0.000000 | 1    0.000000 | 2    0.000000 | 3    0.000000 | 4    0.000000 | 5    0.999829 | 6    0.999719 | Name: Flow Packets/s, dtype: float64
+Fwd Packet Length Std: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | Name: Fwd Packet Length Std, dtype: float64
+Bwd Packet Length Std: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | Name: Bwd Packet Length Std, dtype: float64
+Packet Length Variance: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | Name: Packet Length Variance, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    1 | 1    1 | 2    1 | 3    0 | 4    0 | 5    0 | 6    0 | Name: ACK Flag Count, dtype: int64
+Flow IAT Mean: 0    0.000000 | 1    0.000000 | 2    0.000000 | 3    0.000000 | 4    0.000000 | 5    2.000343 | 6    2.000561 | Name: Flow IAT Mean, dtype: float64
+Flow IAT Std: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | Name: Flow IAT Std, dtype: float64
+Down/Up Ratio: 0    0.0 | 1    0.0 | 2    0.0 | 3    0.0 | 4    0.0 | 5    0.0 | 6    0.0 | Name: Down/Up Ratio, dtype: float64
+Average Packet Size: 0    66.0 | 1    66.0 | 2    66.0 | 3    82.0 | 4    82.0 | 5    82.0 | 6    82.0 | Name: Average Packet Size, dtype: float64
+Active Mean: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: Active Mean, dtype: int64
+Idle Mean: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | Name: Idle Mean, dtype: int64
+

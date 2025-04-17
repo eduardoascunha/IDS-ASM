@@ -8,6 +8,8 @@ import smtplib
 from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
+from datetime import datetime
+
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -24,9 +26,10 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                     alert_data = jsonpickle.decode(msg.body)
                     print(RED + f"[Cordenador] Anomalia Recebida: {alert_data}" + RESET)
 
-                    #if alert_data not in self.agent.alerts_anomalias:
-                    
                     self.agent.alerts_anomalias.append(alert_data)
+
+                    # gera relatorio de anomalias
+                    self.relatorio_anomalias(alert_data)
                 
                     # ids anomaly based apenas avisa o administrador de rede
                     #self.enviar_email_alerta(alert_data) # nao consegue enviar email por estar a ser rodado no core
@@ -57,7 +60,29 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                 smtp.login(EMAIL_ADDRESS_ORIGIN, EMAIL_PASSWORD)
                 smtp.send_message(msg)
 
-            print(GREEN + "[Cordenador] E-mail enviado ao administrador de rede!" + RESET)
+            print(RED + "[Cordenador] E-mail enviado ao administrador de rede!" + RESET)
 
         except Exception as e:
             print(RED + f"[Cordenador] Erro ao enviar e-mail: {e}" + RESET)
+
+
+    def relatorio_anomalias(self, alert_data):    
+        try:
+            load_dotenv()
+            RELATORIO_PATH = os.getenv("RELATORIO_PATH", "relatorio_anomalias.txt")
+
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            with open(RELATORIO_PATH, "a") as f:
+                f.write(f"=== Anomalia Recebida - {timestamp} ===\n")
+                
+                for chave, valor in alert_data.items():
+                    valor_str = str(valor).strip().replace('\n', ' | ')
+                    f.write(f"{chave}: {valor_str}\n")
+                
+                f.write("\n")
+                
+            print(RED + f"[Cordenador] Relatório atualizado!" + RESET)
+
+        except Exception as e:
+            print(RED + f"[Cordenador] Erro ao escrever no relatório: {e}" + RESET)
