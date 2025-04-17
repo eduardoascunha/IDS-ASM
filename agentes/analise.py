@@ -38,6 +38,7 @@ class AnaliseAgent(Agent):
 
         if self.flag_init == 1:
             self.add_behaviour(AnaliseBehaviour())
+            self.add_behaviour(EnviaAlertaBehaviour())
             
         elif self.flag_init == 2:
             self.add_behaviour(FlowReceiveBehaviour())
@@ -46,5 +47,5 @@ class AnaliseAgent(Agent):
         else:
             self.add_behaviour(AnaliseBehaviour())
             self.add_behaviour(FlowReceiveBehaviour())
+            self.add_behaviour(EnviaAlertaBehaviour())
         
-        self.add_behaviour(EnviaAlertaBehaviour())
