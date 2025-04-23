@@ -8,7 +8,7 @@ import sys
 class FlowInfo:
     def __init__(self):
         self._flows = {}
-        self._flow_data = []
+        self._flow_data = {}
     
     def get_flows(self) -> dict:
         return self._flows
@@ -16,15 +16,15 @@ class FlowInfo:
     def set_flows(self, value: dict):
         self._flows = value
 
-    def get_flow_data(self) -> list:
+    def get_flow_data(self) -> dict:
         return self._flow_data
 
-    def set_flow_data(self, value: list):
+    def set_flow_data(self, value: dict):
         self._flow_data = value
     
     def wipe_flows(self):
         self._flows = {}
-        self._flow_data = []
+        self._flow_data = {}
     
     def __repr__(self):
         return f"FlowInfo(flows_count={len(self._flows)}, flow_data_count={len(self._flow_data)})"
@@ -330,7 +330,10 @@ class FlowInfo:
 
         # Create flow entry for DataFrame
         flow_entry = self.create_flow_entry(flow)
-        self._flow_data.append(flow_entry)
+        
+        if src_ip not in self._flow_data:
+            self._flow_data[src_ip] = []
+        self._flow_data[src_ip].append(flow_entry)
 
     def capture_traffic(self, iface, timeout, filter=None):
         """

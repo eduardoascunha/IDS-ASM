@@ -69,7 +69,7 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
     def relatorio_anomalias(self, alert_data):    
         try:
             load_dotenv()
-            RELATORIO_PATH = os.getenv("RELATORIO_PATH", "relatorio_anomalias.txt")
+            RELATORIO_PATH = os.getenv("RELATORIO_PATH")
 
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 

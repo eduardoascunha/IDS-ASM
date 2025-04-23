@@ -3,6 +3,7 @@ import spade
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
 from spade.message import Message
+from behaviours.AA_FlowAnaliseBehaviour import FlowAnaliseBehaviour
 from misc.signatures import ATTACK_SIGNATURES   
 import joblib
 
@@ -19,16 +20,17 @@ RESET = '\033[0m'
 class AnaliseAgent(Agent):
     def __init__(self, jid, password, agenteCordenador, flag_init):
         super().__init__(jid=jid, password=password)
-        self.signatures = ATTACK_SIGNATURES
-        self.recent_packets = []
-        self.alerts = []
-        self.alerts_anomalias = []
+        self.signatures = ATTACK_SIGNATURES # s
+        self.recent_packets = []            # s 
+        self.recent_flows = asyncio.Queue() # a
+        self.alerts = []                    # a    
+        self.alerts_anomalias = []          # a
         self.agenteCordenador = agenteCordenador
         self.flag_init = flag_init
 
         try:
             #self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
-            self.model = joblib.load('anomalyModel/isolation_model_threshold.pkl')
+            self.model = joblib.load('anomalyModel/isolation_model_clean.pkl')
         except Exception as e:
             print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
             raise  
@@ -42,10 +44,12 @@ class AnaliseAgent(Agent):
             
         elif self.flag_init == 2:
             self.add_behaviour(FlowReceiveBehaviour())
+            self.add_behaviour(FlowAnaliseBehaviour())
             self.add_behaviour(EnviaAnomaliaBehaviour())
 
         else:
             self.add_behaviour(AnaliseBehaviour())
             self.add_behaviour(FlowReceiveBehaviour())
+            self.add_behaviour(FlowAnaliseBehaviour())
             self.add_behaviour(EnviaAlertaBehaviour())
         
