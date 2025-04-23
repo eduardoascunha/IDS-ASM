@@ -20,85 +20,85 @@
         <service name="DefaultRoute"/>
       </services>
     </device>
-    <device id="4" name="n4" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+    <device id="4" name="IDS-A" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="261.0" y="137.0" lat="47.577921114171346" lon="-122.12880731441267" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="5" name="n5" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="262.0" y="441.0" lat="47.57515771899294" lon="-122.12879383968338" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
-    <device id="6" name="IDS" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+    <device id="6" name="IDS-S" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="308.0" y="290.0" lat="47.576530344695605" lon="-122.12817400213736" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="7" name="n7" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="417.0" y="118.0" lat="47.578093821527666" lon="-122.12670525664782" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="478.0" y="293.0" lat="47.576503074336614" lon="-122.12588329816285" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="9" name="n9" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="423.0" y="460.0" lat="47.57498500195195" lon="-122.12662440827225" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="10" name="n10" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="618.0" y="463.0" lat="47.574957730788135" lon="-122.12399683606618" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="11" name="n11" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="599.0" y="300.0" lat="47.57643944344373" lon="-122.12425285592215" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="12" name="n12" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="619.0" y="112.0" lat="47.57814836057446" lon="-122.12398336133693" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
     <device id="13" name="ATACANTE" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
@@ -110,10 +110,10 @@
     <device id="15" name="n15" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="761.0" y="240.0" lat="47.57698484858781" lon="-122.12206994978176" alt="2.0"/>
       <services>
+        <service name="IPForward"/>
+        <service name="zebra"/>
         <service name="OSPFv3"/>
         <service name="OSPFv2"/>
-        <service name="zebra"/>
-        <service name="IPForward"/>
       </services>
     </device>
   </devices>
