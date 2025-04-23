@@ -5,6 +5,8 @@ toDO:
 - ver melhor o objeto que esta a ser enviado ao agente cordenador em caso de anomalias 
 - porque é que esse envio esta a demorar tanto tempo a acontecer??
 
+- ver ip das anomalias para o relatorio
+
 Ataques:
 port scaning e syn flood -> sudo nmap -sS 10.0.0.20
 
