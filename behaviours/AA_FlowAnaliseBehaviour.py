@@ -37,10 +37,17 @@ class FlowAnaliseBehaviour(CyclicBehaviour):
                         df.to_csv(file_path, index=False, mode='a', header=False)
                         print(BLUE + "\n[Analise] DataFrame appended para o CSV file" + RESET)
 
-                    # Predict using the loaded model
-                    predictions = self.agent.model.predict(df)
+                    # scaler before predict
+                    X_new_scaled = self.agent.scaler.transform(df)
 
-                    predictions = np.where(predictions == 1, "BENIGN", "ANOMALY")
+                    # pca before predict
+                    X_new_pca = self.agent.pca.transform(X_new_scaled)
+                    
+                    # predict
+                    predictions = self.agent.model.predict(X_new_pca)
+
+                    #predictions = np.where(predictions == -1, "ANOMALY", "BENIGN")
+                    predictions = ["ANOMALY" if p == -1 else "BENIGN" for p in predictions]
 
                     df['prediction'] = predictions
                     

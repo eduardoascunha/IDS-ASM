@@ -59,11 +59,12 @@ DEFENSE_SIGNATURES = {
     },
     "dns_flood": {
         "action": "udp_dns_rate_limit",
-        "description": "Limita a taxa de requisicoes DNS por IP para evitar flood na porta 53/UDP.",
-        "command": lambda ip: f"sudo iptables -A FORWARD -p udp --dport 53 -s {ip} -m limit --limit 5/second --limit-burst 10 -j ACCEPT\n"
-                              f"sudo iptables -A FORWARD -p udp --dport 53 -s {ip} -j DROP\n"
-                              #f"sudo iptables -A INPUT -s {ip} -j DROP\n"
-                              #f"sudo iptables -A FORWARD -s {ip} -j DROP\n"
+        #"description": "Limita a taxa de requisicoes DNS por IP para evitar flood na porta 53/UDP.",
+        "description": "Bloqueia as requisicoes DNS por IP para evitar flood na porta 53/UDP.",
+        "command": lambda ip: #f"sudo iptables -A FORWARD -p udp --dport 53 -s {ip} -m limit --limit 5/second --limit-burst 10 -j ACCEPT\n"
+                              #f"sudo iptables -A FORWARD -p udp --dport 53 -s {ip} -j DROP\n"
+                              f"sudo iptables -A INPUT -s {ip} -j DROP\n"
+                              f"sudo iptables -A FORWARD -s {ip} -j DROP\n"
     },
     "http_flood": {
         "action": "http_conn_limit",

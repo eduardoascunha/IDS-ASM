@@ -30,7 +30,9 @@ class AnaliseAgent(Agent):
 
         try:
             #self.model = joblib.load('anomalyModel/binary_classification_model.pkl')
-            self.model = joblib.load('anomalyModel/isolation_model_clean.pkl')
+            self.model = joblib.load('anomalyModel/ocsvm_model_pca.pkl')
+            self.scaler = joblib.load('anomalyModel/scaler.pkl')
+            self.pca = joblib.load('anomalyModel/pca.pkl')
         except Exception as e:
             print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
             raise  
