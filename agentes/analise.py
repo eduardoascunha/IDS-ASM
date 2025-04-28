@@ -23,7 +23,7 @@ class AnaliseAgent(Agent):
         self.signatures = ATTACK_SIGNATURES # s
         self.recent_packets = []            # s 
         self.recent_flows = asyncio.Queue() # a
-        self.alerts = []                    # a    
+        self.alerts = []                    # s   
         self.alerts_anomalias = []          # a
         self.agenteCordenador = agenteCordenador
         self.flag_init = flag_init
