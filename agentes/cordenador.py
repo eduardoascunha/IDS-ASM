@@ -14,13 +14,25 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class CordenadorAgent(Agent):
-    def __init__(self, jid, password, flag_init):
+    def __init__(self, jid, password, maquina_a_proteger,flag_init):
         super().__init__(jid=jid, password=password)
-        self.alerts = []
-        self.alerts_resolved = []
-        self.alerts_anomalias = []
+
+        if flag_init == 1: # assinaturas
+            self.alerts = []
+            self.alerts_resolved = []
+            self.maquina_a_proteger = maquina_a_proteger
+            self.defense_signatures = DEFENSE_SIGNATURES
+
+        elif flag_init == 2: # anomalias
+            self.alerts_anomalias = []
+
+        else: # asm
+            self.alerts = []
+            self.alerts_resolved = []
+            self.alerts_anomalias = []
+            self.defense_signatures = DEFENSE_SIGNATURES
+
         self.flag_init = flag_init
-        self.defense_signatures = DEFENSE_SIGNATURES
 
     async def setup(self):
         print(RED + f"[Cordenador] Agente Cordenador a rodar." + RESET)
@@ -28,6 +40,7 @@ class CordenadorAgent(Agent):
         if self.flag_init == 1: # assinatura
             self.add_behaviour(ReceiveAlertsBehaviour())
             self.add_behaviour(PreventionBehaviour())
+            self.add_behaviour(ApagaAlertasBehaviour(period=3600)) # 1h
         
         elif self.flag_init == 2: # anomalia
             self.add_behaviour(ReceiveAnomaliaBehaviour())
@@ -36,7 +49,8 @@ class CordenadorAgent(Agent):
             self.add_behaviour(ReceiveAlertsBehaviour())
             self.add_behaviour(PreventionBehaviour())
             self.add_behaviour(ReceiveAnomaliaBehaviour())
+            self.add_behaviour(ApagaAlertasBehaviour(period=3600)) # 1h
         
-        self.add_behaviour(ApagaAlertasBehaviour(period=3600)) # 1h
+        
 
     

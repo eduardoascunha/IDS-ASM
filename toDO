@@ -2,11 +2,11 @@ toDO:
 
 - modelo de anomalias detetar anomalias e nao tudo o que aparece
 
-- ver melhor o objeto que esta a ser enviado ao agente cordenador em caso de anomalias 
-- porque é que esse envio esta a demorar tanto tempo a acontecer?? -> bloqueia x segundos a absorver o flow de pacotes, beneficiaria de um padigma sicrono
-
 - ver ip das anomalias para o relatorio - faz sentido uma anomalia de fluxo ter ip, num fluxo varios pacotes com varios ips (a analise podia filtrar por ip até)
 - CONFIRMAR SE TA 100% correto
+
+- rever codigo e estrutura - anomalias mainly
+
 
 Ataques:
 port scaning e syn flood -> sudo nmap -sS 10.0.0.20

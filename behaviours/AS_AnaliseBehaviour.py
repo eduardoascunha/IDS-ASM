@@ -81,8 +81,18 @@ class AnaliseBehaviour(CyclicBehaviour):
                     "timestamp": current_time,
                     "details": f"Detetadas {len(unique_ports)} tentativas de ligação em portas diferentes proveniente do ip: {src_ip}"
                 }
-                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
-                self.agent.alerts.append(alert)
+                
+                #print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                
+                if alert["src_ip"] not in self.agent.alertas_detetados.keys():
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]] = [alert["type"]]
+                    self.agent.alerts.append(alert)
+                
+                elif alert["type"] not in self.agent.alertas_detetados[alert["src_ip"]]:
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]].append(alert["type"])
+                    self.agent.alerts.append(alert)
 
         async def check_ping_flood(self, packet):
             #if packet.get("src_port") is None:
@@ -104,8 +114,18 @@ class AnaliseBehaviour(CyclicBehaviour):
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_icmp)} pacotes ICMP em {self.agent.signatures['ping_flood']['conditions']['time_window']} segundo"
                 }
-                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
-                self.agent.alerts.append(alert)
+                
+                #print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                
+                if alert["src_ip"] not in self.agent.alertas_detetados.keys():
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]] = [alert["type"]]
+                    self.agent.alerts.append(alert)
+                
+                elif alert["type"] not in self.agent.alertas_detetados[alert["src_ip"]]:
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]].append(alert["type"])
+                    self.agent.alerts.append(alert)
 
         async def check_syn_flood(self, packet):
             if packet.get("src_port") is None:
@@ -127,8 +147,18 @@ class AnaliseBehaviour(CyclicBehaviour):
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_syn)} pacotes TCP em {self.agent.signatures['syn_flood']['conditions']['time_window']} segundo"
                 }
-                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
-                self.agent.alerts.append(alert)
+                
+                #print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                
+                if alert["src_ip"] not in self.agent.alertas_detetados.keys():
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]] = [alert["type"]]
+                    self.agent.alerts.append(alert)
+                
+                elif alert["type"] not in self.agent.alertas_detetados[alert["src_ip"]]:
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]].append(alert["type"])
+                    self.agent.alerts.append(alert)
 
         async def check_dns_flood(self, packet):
             if packet.get("src_port") is None:
@@ -151,8 +181,18 @@ class AnaliseBehaviour(CyclicBehaviour):
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_dns)} pacotes DNS em {self.agent.signatures['dns_flood']['conditions']['time_window']} segundo"
                 }
-                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
-                self.agent.alerts.append(alert)
+                
+                #print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                
+                if alert["src_ip"] not in self.agent.alertas_detetados.keys():
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]] = [alert["type"]]
+                    self.agent.alerts.append(alert)
+                
+                elif alert["type"] not in self.agent.alertas_detetados[alert["src_ip"]]:
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]].append(alert["type"])
+                    self.agent.alerts.append(alert)
 
         async def check_http_flood(self, packet):
             if packet.get("src_port") is None:
@@ -175,5 +215,16 @@ class AnaliseBehaviour(CyclicBehaviour):
                     "timestamp": current_time,
                     "details": f"Detetados {len(recent_http)} pacotes HTTP em {self.agent.signatures['http_flood']['conditions']['time_window']} segundo"
                 }
-                print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
-                self.agent.alerts.append(alert)
+                
+                #print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                
+                if alert["src_ip"] not in self.agent.alertas_detetados.keys():
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]] = [alert["type"]]
+                    self.agent.alerts.append(alert)
+                
+                elif alert["type"] not in self.agent.alertas_detetados[alert["src_ip"]]:
+                    print(BLUE + f"[Analise] ALERTA: {alert}" + RESET)
+                    self.agent.alertas_detetados[alert["src_ip"]].append(alert["type"])
+                    self.agent.alerts.append(alert)
+

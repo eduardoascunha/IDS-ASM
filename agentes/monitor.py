@@ -17,10 +17,19 @@ RESET = '\033[0m'
 class MonitorAgent(Agent):
     def __init__(self, jid, password, agenteAnalise, interface, flag_init):
         super().__init__(jid=jid, password=password)
-        self.packet_queue = asyncio.Queue()
-        self.agenteAnalise = agenteAnalise
+
+        if flag_init == 1: # assinaturas
+            self.packet_queue = asyncio.Queue()
+
+        elif flag_init == 2: # anomalias
+            self.flow_controller = FlowInfo()
+
+        else: # asm
+            self.packet_queue = asyncio.Queue()
+            self.flow_controller = FlowInfo()
+        
         self.interface = interface
-        self.flow_controller = FlowInfo()
+        self.agenteAnalise = agenteAnalise
         self.flag_init = flag_init
 
     async def setup(self):

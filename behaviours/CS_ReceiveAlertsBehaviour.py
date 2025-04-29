@@ -23,7 +23,7 @@ class ReceiveAlertsBehaviour(CyclicBehaviour):
                     ip = alert_data['src_ip']
                     type = alert_data['type']
 
-                    if (ip,type) not in self.agent.alerts:
+                    if (ip,type) not in self.agent.alerts and ip != self.agent.maquina_a_proteger:
                         print(RED + f"[Cordenador] Alerta Novo Recebido: {alert_data}" + RESET)
                         self.agent.alerts.append((ip,type))
 

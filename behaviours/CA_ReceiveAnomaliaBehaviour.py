@@ -24,7 +24,7 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
             if msg:
                 if msg.metadata["performative"] == "inform-fluxo":
                     alert_data = jsonpickle.decode(msg.body)
-                    print(RED + f"[Cordenador] Anomalia Recebida: {alert_data}" + RESET)
+                    print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
                     self.agent.alerts_anomalias.append(alert_data)
 
