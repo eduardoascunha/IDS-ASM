@@ -454,3 +454,1035 @@ FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
 ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
 Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
 
+=== Anomalia Recebida - 2025-04-30 17:04:22 ===
+Source IP: 10.0.5.1
+Destination Port: 0        0 | 1    56284 | 2    56290 | 3    56304 | 4        0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | 3    0 | 4    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | 3    1 | 4    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0.000000e+00 | 1    2.084995e+07 | 2    2.241331e+07 | 3    1.648795e+07 | 4    8.198891e+01 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    2 | 2    2 | 3    2 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1    171.5 | 2    171.0 | 3    171.0 | 4     82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:04:22 ===
+Source IP: 10.0.6.1
+Destination Port: 0    56284 | 1    56290 | 2    56304 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0 | 1    0 | 2    0 | Name: Flow Bytes/s, dtype: int64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    1 | 1    1 | 2    1 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    277.0 | 1    276.0 | 2    276.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:04:41 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2       1025 | 3        139 | 4         53 |        ...   | 103    50872 | 104    47812 | 105    49252 | 106    47720 | 107    50980 | Name: Destination Port, Length: 108, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 103    0 | 104    0 | 105    0 | 106    0 | 107    0 | Name: Flow Duration, Length: 108, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 103    1 | 104    1 | 105    1 | 106    1 | 107    1 | Name: Total Fwd Packets, Length: 108, dtype: int64
+Flow Bytes/s: 0      5.965232e+06 | 1      1.917396e+07 | 2      1.731842e+07 | 3      2.236962e+07 | 4      1.988411e+07 |            ...      | 103    0.000000e+00 | 104    0.000000e+00 | 105    0.000000e+00 | 106    0.000000e+00 | 107    0.000000e+00 | Name: Flow Bytes/s, Length: 108, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 103    0 | 104    0 | 105    0 | 106    0 | 107    0 | Name: SYN Flag Count, Length: 108, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 103    1 | 104    1 | 105    1 | 106    1 | 107    1 | Name: RST Flag Count, Length: 108, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 103    0 | 104    0 | 105    0 | 106    0 | 107    0 | Name: FIN Flag Count, Length: 108, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 103    1 | 104    1 | 105    1 | 106    1 | 107    1 | Name: ACK Flag Count, Length: 108, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 103    54.0 | 104    54.0 | 105    54.0 | 106    54.0 | 107    54.0 | Name: Average Packet Size, Length: 108, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:00 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2        995 | 3       1720 | 4        143 |        ...   | 102    37342 | 103    51746 | 104    52520 | 105    55958 | 106    49522 | Name: Destination Port, Length: 107, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 102    0 | 103    0 | 104    0 | 105    0 | 106    0 | Name: Flow Duration, Length: 107, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 102    1 | 103    1 | 104    1 | 105    1 | 106    1 | Name: Total Fwd Packets, Length: 107, dtype: int64
+Flow Bytes/s: 0      4.709394e+06 | 1      7.561562e+06 | 2      1.167111e+07 | 3      1.220161e+07 | 4      1.193046e+07 |            ...      | 102    0.000000e+00 | 103    0.000000e+00 | 104    0.000000e+00 | 105    0.000000e+00 | 106    0.000000e+00 | Name: Flow Bytes/s, Length: 107, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 102    0 | 103    0 | 104    0 | 105    0 | 106    0 | Name: SYN Flag Count, Length: 107, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 102    1 | 103    1 | 104    1 | 105    1 | 106    1 | Name: RST Flag Count, Length: 107, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 102    0 | 103    0 | 104    0 | 105    0 | 106    0 | Name: FIN Flag Count, Length: 107, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 102    1 | 103    1 | 104    1 | 105    1 | 106    1 | Name: ACK Flag Count, Length: 107, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 102    54.0 | 103    54.0 | 104    54.0 | 105    54.0 | 106    54.0 | Name: Average Packet Size, Length: 107, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:03 ===
+Source IP: 10.0.0.20
+Destination Port: 0        80 | 1       443 | 2       139 | 3      8080 | 4       113 |       ...   | 93    60316 | 94    40548 | 95    53192 | 96    52630 | 97    38552 | Name: Destination Port, Length: 98, dtype: int64
+Flow Duration: 0     0 | 1     0 | 2     0 | 3     0 | 4     0 |      .. | 93    0 | 94    0 | 95    0 | 96    0 | 97    0 | Name: Flow Duration, Length: 98, dtype: int64
+Total Fwd Packets: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 93    1 | 94    1 | 95    1 | 96    1 | 97    1 | Name: Total Fwd Packets, Length: 98, dtype: int64
+Flow Bytes/s: 0     6.391320e+06 | 1     2.064888e+07 | 2     1.789570e+07 | 3     2.064888e+07 | 4     2.236962e+07 |           ...      | 93    0.000000e+00 | 94    0.000000e+00 | 95    0.000000e+00 | 96    0.000000e+00 | 97    0.000000e+00 | Name: Flow Bytes/s, Length: 98, dtype: float64
+SYN Flag Count: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 93    0 | 94    0 | 95    0 | 96    0 | 97    0 | Name: SYN Flag Count, Length: 98, dtype: int64
+RST Flag Count: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 93    1 | 94    1 | 95    1 | 96    1 | 97    1 | Name: RST Flag Count, Length: 98, dtype: int64
+FIN Flag Count: 0     0 | 1     0 | 2     0 | 3     0 | 4     0 |      .. | 93    0 | 94    0 | 95    0 | 96    0 | 97    0 | Name: FIN Flag Count, Length: 98, dtype: int64
+ACK Flag Count: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 93    1 | 94    1 | 95    1 | 96    1 | 97    1 | Name: ACK Flag Count, Length: 98, dtype: int64
+Average Packet Size: 0     64.0 | 1     64.0 | 2     64.0 | 3     64.0 | 4     64.0 |       ...  | 93    54.0 | 94    54.0 | 95    54.0 | 96    54.0 | 97    54.0 | Name: Average Packet Size, Length: 98, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:09 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    82.000655 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:09 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    82.000332 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:28 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2       8080 | 3        111 | 4        256 |        ...   | 104    49486 | 105    51150 | 106    41626 | 107    52126 | 108    43594 | Name: Destination Port, Length: 109, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 104    0 | 105    0 | 106    0 | 107    0 | 108    0 | Name: Flow Duration, Length: 109, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 104    1 | 105    1 | 106    1 | 107    1 | 108    1 | Name: Total Fwd Packets, Length: 109, dtype: int64
+Flow Bytes/s: 0      3.532045e+06 | 1      1.412818e+07 | 2      1.167111e+07 | 3      1.451002e+07 | 4      1.342177e+07 |            ...      | 104    0.000000e+00 | 105    0.000000e+00 | 106    0.000000e+00 | 107    0.000000e+00 | 108    0.000000e+00 | Name: Flow Bytes/s, Length: 109, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 104    0 | 105    0 | 106    0 | 107    0 | 108    0 | Name: SYN Flag Count, Length: 109, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 104    1 | 105    1 | 106    1 | 107    1 | 108    1 | Name: RST Flag Count, Length: 109, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 104    0 | 105    0 | 106    0 | 107    0 | 108    0 | Name: FIN Flag Count, Length: 109, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 104    1 | 105    1 | 106    1 | 107    1 | 108    1 | Name: ACK Flag Count, Length: 109, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 104    54.0 | 105    54.0 | 106    54.0 | 107    54.0 | 108    54.0 | Name: Average Packet Size, Length: 109, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:31 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2         25 | 3       8080 | 4        445 |        ...   | 97     39580 | 98     52956 | 99     40060 | 100    56496 | 101    52954 | Name: Destination Port, Length: 102, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 97     0 | 98     0 | 99     0 | 100    0 | 101    0 | Name: Flow Duration, Length: 102, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 97     1 | 98     1 | 99     1 | 100    1 | 101    1 | Name: Total Fwd Packets, Length: 102, dtype: int64
+Flow Bytes/s: 0      6.100806e+06 | 1      2.064888e+07 | 2      1.851279e+07 | 3      1.988411e+07 | 4      1.376592e+07 |            ...      | 97     0.000000e+00 | 98     0.000000e+00 | 99     0.000000e+00 | 100    0.000000e+00 | 101    0.000000e+00 | Name: Flow Bytes/s, Length: 102, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 97     0 | 98     0 | 99     0 | 100    0 | 101    0 | Name: SYN Flag Count, Length: 102, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 97     1 | 98     1 | 99     1 | 100    1 | 101    1 | Name: RST Flag Count, Length: 102, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 97     0 | 98     0 | 99     0 | 100    0 | 101    0 | Name: FIN Flag Count, Length: 102, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 97     1 | 98     1 | 99     1 | 100    1 | 101    1 | Name: ACK Flag Count, Length: 102, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 97     54.0 | 98     54.0 | 99     54.0 | 100    54.0 | 101    54.0 | Name: Average Packet Size, Length: 102, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:44 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    82.002786 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:44 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2         80 | 3        445 | 4       1025 |        ...   | 310    58480 | 311    33434 | 312    47630 | 313    59692 | 314    60042 | Name: Destination Port, Length: 315, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 310    0 | 311    0 | 312    0 | 313    0 | 314    0 | Name: Flow Duration, Length: 315, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 310    1 | 311    1 | 312    1 | 313    1 | 314    1 | Name: Total Fwd Packets, Length: 315, dtype: int64
+Flow Bytes/s: 0      5.711393e+06 | 1      1.988411e+07 | 2      1.626882e+07 | 3      2.064888e+07 | 4      2.147484e+07 |            ...      | 310    0.000000e+00 | 311    0.000000e+00 | 312    0.000000e+00 | 313    0.000000e+00 | 314    0.000000e+00 | Name: Flow Bytes/s, Length: 315, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 310    0 | 311    0 | 312    0 | 313    0 | 314    0 | Name: SYN Flag Count, Length: 315, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 310    1 | 311    1 | 312    1 | 313    1 | 314    1 | Name: RST Flag Count, Length: 315, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 310    0 | 311    0 | 312    0 | 313    0 | 314    0 | Name: FIN Flag Count, Length: 315, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 310    1 | 311    1 | 312    1 | 313    1 | 314    1 | Name: ACK Flag Count, Length: 315, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 310    54.0 | 311    54.0 | 312    54.0 | 313    54.0 | 314    54.0 | Name: Average Packet Size, Length: 315, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:05:54 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2        113 | 3         25 | 4         21 |        ...   | 418    41278 | 419    40052 | 420    39126 | 421    53722 | 422    34944 | Name: Destination Port, Length: 423, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 418    0 | 419    0 | 420    0 | 421    0 | 422    0 | Name: Flow Duration, Length: 423, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 418    1 | 419    1 | 420    1 | 421    1 | 422    1 | Name: Total Fwd Packets, Length: 423, dtype: int64
+Flow Bytes/s: 0      5.368709e+06 | 1      1.789570e+07 | 2      1.193046e+07 | 3      2.064888e+07 | 4      2.147484e+07 |            ...      | 418    0.000000e+00 | 419    0.000000e+00 | 420    0.000000e+00 | 421    0.000000e+00 | 422    0.000000e+00 | Name: Flow Bytes/s, Length: 423, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 418    0 | 419    0 | 420    0 | 421    0 | 422    0 | Name: SYN Flag Count, Length: 423, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 418    1 | 419    1 | 420    1 | 421    1 | 422    1 | Name: RST Flag Count, Length: 423, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 418    0 | 419    0 | 420    0 | 421    0 | 422    0 | Name: FIN Flag Count, Length: 423, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 418    1 | 419    1 | 420    1 | 421    1 | 422    1 | Name: ACK Flag Count, Length: 423, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 418    54.0 | 419    54.0 | 420    54.0 | 421    54.0 | 422    54.0 | Name: Average Packet Size, Length: 423, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:06:14 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    82.001965 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:07:52 ===
+Source IP: 10.0.0.20
+Destination Port: 0        80 | 1       443 | 2       135 | 3      8080 | 4       256 |       ...   | 95    50684 | 96    60404 | 97    43894 | 98    32820 | 99    55076 | Name: Destination Port, Length: 100, dtype: int64
+Flow Duration: 0     0 | 1     0 | 2     0 | 3     0 | 4     0 |      .. | 95    0 | 96    0 | 97    0 | 98    0 | 99    0 | Name: Flow Duration, Length: 100, dtype: int64
+Total Fwd Packets: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 95    1 | 96    1 | 97    1 | 98    1 | 99    1 | Name: Total Fwd Packets, Length: 100, dtype: int64
+Flow Bytes/s: 0     6.242685e+06 | 1     2.064888e+07 | 2     1.851279e+07 | 3     2.147484e+07 | 4     2.236962e+07 |           ...      | 95    0.000000e+00 | 96    0.000000e+00 | 97    0.000000e+00 | 98    0.000000e+00 | 99    0.000000e+00 | Name: Flow Bytes/s, Length: 100, dtype: float64
+SYN Flag Count: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 95    0 | 96    0 | 97    0 | 98    0 | 99    0 | Name: SYN Flag Count, Length: 100, dtype: int64
+RST Flag Count: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 95    1 | 96    1 | 97    1 | 98    1 | 99    1 | Name: RST Flag Count, Length: 100, dtype: int64
+FIN Flag Count: 0     0 | 1     0 | 2     0 | 3     0 | 4     0 |      .. | 95    0 | 96    0 | 97    0 | 98    0 | 99    0 | Name: FIN Flag Count, Length: 100, dtype: int64
+ACK Flag Count: 0     1 | 1     1 | 2     1 | 3     1 | 4     1 |      .. | 95    1 | 96    1 | 97    1 | 98    1 | 99    1 | Name: ACK Flag Count, Length: 100, dtype: int64
+Average Packet Size: 0     64.0 | 1     64.0 | 2     64.0 | 3     64.0 | 4     64.0 |       ...  | 95    54.0 | 96    54.0 | 97    54.0 | 98    54.0 | 99    54.0 | Name: Average Packet Size, Length: 100, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:07:56 ===
+Source IP: 10.0.5.1
+Destination Port: 0        0 | 1    43844 | 2    43854 | 3    43866 | 4        0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | 3    0 | 4    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | 3    1 | 4    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0.000000e+00 | 1    1.625882e+07 | 2    2.049217e+07 | 3    2.390753e+07 | 4    8.195849e+01 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    2 | 2    2 | 3    2 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1    172.5 | 2    171.0 | 3    171.0 | 4     82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:07:56 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.00000 | 1    81.96877 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:07:56 ===
+Source IP: 10.0.6.1
+Destination Port: 0    43844 | 1    43854 | 2    43866 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0 | 1    0 | 2    0 | Name: Flow Bytes/s, dtype: int64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    1 | 1    1 | 2    1 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    279.0 | 1    276.0 | 2    276.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:02 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.962441 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:02 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.959873 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:05 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.961992 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:05 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.960918 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:11 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.964688 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:11 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.956621 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:15 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.960859 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:15 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.969884 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:55 ===
+Source IP: 10.0.5.1
+Destination Port: 0        0 | 1        0 | 2    39802 | 3    39812 | 4        0 | 5    39820 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    0 | 3    0 | 4    4 | 5    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    1 | 3    1 | 4    3 | 5    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0.000000e+00 | 1    8.194156e+01 | 2    1.404888e+07 | 3    1.147562e+07 | 4    6.146316e+01 | 5    1.559187e+07 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    2 | 3    2 | 4    0 | 5    2 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1     82.0 | 2    172.5 | 3    171.0 | 4     82.0 | 5    171.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:55 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.947717 | 2    61.467059 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:55 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2       8080 | 3        199 | 4        993 |        ...   | 106    59932 | 107    35746 | 108    59702 | 109    36160 | 110    52812 | Name: Destination Port, Length: 111, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 106    0 | 107    0 | 108    0 | 109    0 | 110    0 | Name: Flow Duration, Length: 111, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 106    1 | 107    1 | 108    1 | 109    1 | 110    1 | Name: Total Fwd Packets, Length: 111, dtype: int64
+Flow Bytes/s: 0      6.032257e+06 | 1      1.917396e+07 | 2      1.851279e+07 | 3      2.147484e+07 | 4      2.236962e+07 |            ...      | 106    0.000000e+00 | 107    0.000000e+00 | 108    0.000000e+00 | 109    0.000000e+00 | 110    0.000000e+00 | Name: Flow Bytes/s, Length: 111, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 106    0 | 107    0 | 108    0 | 109    0 | 110    0 | Name: SYN Flag Count, Length: 111, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 106    1 | 107    1 | 108    1 | 109    1 | 110    1 | Name: RST Flag Count, Length: 111, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 106    0 | 107    0 | 108    0 | 109    0 | 110    0 | Name: FIN Flag Count, Length: 111, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 106    1 | 107    1 | 108    1 | 109    1 | 110    1 | Name: ACK Flag Count, Length: 111, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 106    54.0 | 107    54.0 | 108    54.0 | 109    54.0 | 110    54.0 | Name: Average Packet Size, Length: 111, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:08:55 ===
+Source IP: 10.0.6.1
+Destination Port: 0    39802 | 1    39812 | 2    39820 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0 | 1    0 | 2    0 | Name: Flow Bytes/s, dtype: int64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    1 | 1    1 | 2    1 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    279.0 | 1    276.0 | 2    276.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:00 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.961689 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:00 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.958721 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:06 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.971662 | 2    61.476596 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:06 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.969913 | 2    61.476329 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:11 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.963154 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:11 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.963125 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:16 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.965528 | 2    61.484498 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:16 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.970988 | 2    61.486033 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:21 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.994585 | 2    61.490390 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:21 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    82.000899 | 2    61.493655 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:26 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.971359 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:26 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.968419 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:29 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.975022 | 2    61.486656 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:29 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.985399 | 2    61.487187 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:59 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.976566 | 2    61.476940 | 3    54.652564 | 4    51.237367 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:59 ===
+Source IP: 10.0.5.1
+Destination Port: 0        0 | 1        0 | 2    40828 | 3    40834 | 4    40850 | 5        0 | 6        0 | 7        0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    0 | 3    0 | 4    0 | 5    4 | 6    6 | 7    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    1 | 3    1 | 4    1 | 5    3 | 6    4 | 7    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0.000000e+00 | 1    8.197131e+01 | 2    8.823383e+06 | 3    1.075382e+07 | 4    1.707681e+07 | 5    6.147802e+01 | 6    5.464999e+01 | 7    5.123583e+01 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    2 | 3    2 | 4    2 | 5    0 | 6    0 | 7    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1     82.0 | 2    172.5 | 3    170.5 | 4    171.0 | 5     82.0 | 6     82.0 | 7     82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:09:59 ===
+Source IP: 10.0.6.1
+Destination Port: 0    40828 | 1    40834 | 2    40850 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0 | 1    0 | 2    0 | Name: Flow Bytes/s, dtype: int64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    1 | 1    1 | 2    1 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    279.0 | 1    275.0 | 2    276.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:09 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.968497 | 2    61.478794 | 3    54.648669 | 4    51.233433 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:09 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.967462 | 2    61.478571 | 3    54.650000 | 4    51.233067 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:19 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.981256 | 2    61.488393 | 3    54.654668 | 4    51.235922 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:19 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.991233 | 2    61.491053 | 3    54.656511 | 4    51.237447 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:30 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.967198 | 2    61.487492 | 3    54.651693 | 4    51.238869 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:30 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.972668 | 2    61.487972 | 3    54.653387 | 4    51.238891 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:30 ===
+Source IP: 10.0.0.20
+Destination Port: 0         80 | 1        443 | 2        113 | 3        587 | 4        445 |        ...   | 311    45490 | 312    55592 | 313    49976 | 314    57568 | 315    58418 | Name: Destination Port, Length: 316, dtype: int64
+Flow Duration: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 311    0 | 312    0 | 313    0 | 314    0 | 315    0 | Name: Flow Duration, Length: 316, dtype: int64
+Total Fwd Packets: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 311    1 | 312    1 | 313    1 | 314    1 | 315    1 | Name: Total Fwd Packets, Length: 316, dtype: int64
+Flow Bytes/s: 0      6.242685e+06 | 1      1.988411e+07 | 2      6.795834e+06 | 3      1.626882e+07 | 4      2.064888e+07 |            ...      | 311    0.000000e+00 | 312    0.000000e+00 | 313    0.000000e+00 | 314    0.000000e+00 | 315    0.000000e+00 | Name: Flow Bytes/s, Length: 316, dtype: float64
+SYN Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 311    0 | 312    0 | 313    0 | 314    0 | 315    0 | Name: SYN Flag Count, Length: 316, dtype: int64
+RST Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 311    1 | 312    1 | 313    1 | 314    1 | 315    1 | Name: RST Flag Count, Length: 316, dtype: int64
+FIN Flag Count: 0      0 | 1      0 | 2      0 | 3      0 | 4      0 |       .. | 311    0 | 312    0 | 313    0 | 314    0 | 315    0 | Name: FIN Flag Count, Length: 316, dtype: int64
+ACK Flag Count: 0      1 | 1      1 | 2      1 | 3      1 | 4      1 |       .. | 311    1 | 312    1 | 313    1 | 314    1 | 315    1 | Name: ACK Flag Count, Length: 316, dtype: int64
+Average Packet Size: 0      64.0 | 1      64.0 | 2      64.0 | 3      64.0 | 4      64.0 |        ...  | 311    54.0 | 312    54.0 | 313    54.0 | 314    54.0 | 315    54.0 | Name: Average Packet Size, Length: 316, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:40 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.962080 | 2    61.477618 | 3    54.643145 | 4    51.230895 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:40 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.980425 | 2    61.482685 | 3    54.645094 | 4    51.233632 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:43 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    2 | 3    4 | 4    6 | 5    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | 5    6 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0      0.000000 | 1     81.976869 | 2    131.050129 | 3     90.974753 | 4     74.310617 | 5     65.978400 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    94.0 | 3    91.0 | 4    89.2 | 5    88.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:43 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | 2    1 | 3    1 | 4    2 | 5    4 | 6    6 | 7    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | 5    6 | 6    7 | 7    8 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0      0.000000 | 1    224.861921 | 2    336.809980 | 3    398.346459 | 4    396.890045 | 5    218.954649 | 6    159.625095 | 7    129.962639 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | 5    0 | 6    0 | 7    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.000000 | 1    156.000000 | 2    180.666667 | 3    178.000000 | 4    158.800000 | 5    146.000000 | 6    136.857143 | 7    130.000000 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:44 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0      0.000000 | 1    184.844991 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1    108.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:10:44 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    1 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0      0.000000 | 1    198.472731 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1    108.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:02 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.963213 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:02 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.966934 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:02 ===
+Source IP: 10.0.30.20
+Destination Port: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 23585    0 | 23586    0 | 23587    0 | 23588    0 | 23589    0 | Name: Destination Port, Length: 23590, dtype: int64
+Flow Duration: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 23585    5 | 23586    5 | 23587    5 | 23588    5 | 23589    5 | Name: Flow Duration, Length: 23590, dtype: int64
+Total Fwd Packets: 0            1 | 1            2 | 2            3 | 3            4 | 4            5 |          ...   | 23585    23586 | 23586    23587 | 23587    23588 | 23588    23589 | 23589    23590 | Name: Total Fwd Packets, Length: 23590, dtype: int64
+Flow Bytes/s: 0        0.000000e+00 | 1        1.394412e+06 | 2        1.508226e+06 | 3        1.595246e+06 | 4        1.681280e+06 |              ...      | 23585    2.464455e+05 | 23586    2.464428e+05 | 23587    2.464414e+05 | 23588    2.464390e+05 | 23589    2.464377e+05 | Name: Flow Bytes/s, Length: 23590, dtype: float64
+SYN Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 23585    0 | 23586    0 | 23587    0 | 23588    0 | 23589    0 | Name: SYN Flag Count, Length: 23590, dtype: int64
+RST Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 23585    0 | 23586    0 | 23587    0 | 23588    0 | 23589    0 | Name: RST Flag Count, Length: 23590, dtype: int64
+FIN Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 23585    0 | 23586    0 | 23587    0 | 23588    0 | 23589    0 | Name: FIN Flag Count, Length: 23590, dtype: int64
+ACK Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 23585    0 | 23586    0 | 23587    0 | 23588    0 | 23589    0 | Name: ACK Flag Count, Length: 23590, dtype: int64
+Average Packet Size: 0        42.0 | 1        42.0 | 2        42.0 | 3        42.0 | 4        42.0 |          ...  | 23585    42.0 | 23586    42.0 | 23587    42.0 | 23588    42.0 | 23589    42.0 | Name: Average Packet Size, Length: 23590, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:02 ===
+Source IP: 10.0.0.20
+Destination Port: 0       0 | 1       0 | 2       0 | 3       0 | 4       0 |        .. | 6533    0 | 6534    0 | 6535    0 | 6536    0 | 6537    0 | Name: Destination Port, Length: 6538, dtype: int64
+Flow Duration: 0       0 | 1       0 | 2       0 | 3       0 | 4       0 |        .. | 6533    5 | 6534    5 | 6535    5 | 6536    5 | 6537    5 | Name: Flow Duration, Length: 6538, dtype: int64
+Total Fwd Packets: 0           1 | 1           2 | 2           3 | 3           4 | 4           5 |         ...   | 6533    23578 | 6534    23581 | 6535    23583 | 6536    23585 | 6537    23585 | Name: Total Fwd Packets, Length: 6538, dtype: int64
+Flow Bytes/s: 0       2.985776e+06 | 1       1.605110e+06 | 2       1.691143e+06 | 3       1.729185e+06 | 4       1.786620e+06 |             ...      | 6533    2.464503e+05 | 6534    2.464507e+05 | 6535    2.464464e+05 | 6536    2.464464e+05 | 6537    2.464468e+05 | Name: Flow Bytes/s, Length: 6538, dtype: float64
+SYN Flag Count: 0       0 | 1       0 | 2       0 | 3       0 | 4       0 |        .. | 6533    0 | 6534    0 | 6535    0 | 6536    0 | 6537    0 | Name: SYN Flag Count, Length: 6538, dtype: int64
+RST Flag Count: 0       0 | 1       0 | 2       0 | 3       0 | 4       0 |        .. | 6533    0 | 6534    0 | 6535    0 | 6536    0 | 6537    0 | Name: RST Flag Count, Length: 6538, dtype: int64
+FIN Flag Count: 0       0 | 1       0 | 2       0 | 3       0 | 4       0 |        .. | 6533    0 | 6534    0 | 6535    0 | 6536    0 | 6537    0 | Name: FIN Flag Count, Length: 6538, dtype: int64
+ACK Flag Count: 0       0 | 1       0 | 2       0 | 3       0 | 4       0 |        .. | 6533    0 | 6534    0 | 6535    0 | 6536    0 | 6537    0 | Name: ACK Flag Count, Length: 6538, dtype: int64
+Average Packet Size: 0       42.0 | 1       42.0 | 2       42.0 | 3       42.0 | 4       42.0 |         ...  | 6533    42.0 | 6534    42.0 | 6535    42.0 | 6536    42.0 | 6537    42.0 | Name: Average Packet Size, Length: 6538, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:12 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.978784 | 2    61.479186 | 3    54.645888 | 4    51.234184 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:12 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.981676 | 2    61.483168 | 3    54.651617 | 4    51.236384 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:22 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.963701 | 2    61.479765 | 3    54.648345 | 4    51.234832 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:22 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.969005 | 2    61.485198 | 3    54.652390 | 4    51.237418 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:29 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.965547 | 2    61.484370 | 3    54.651613 | 4    51.236926 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:29 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.964668 | 2    61.484641 | 3    54.650629 | 4    51.237124 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:30 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.978227 | 2    61.477475 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:14:30 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.991526 | 2    61.481838 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:22 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    20.496706 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:22 ===
+Source IP: 10.0.5.1
+Destination Port: 0       0 | 1    5222 | 2       0 | 3       0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    4 | 3    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    2 | 3    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1     0.000000 | 2    40.997107 | 3    30.744478 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    1 | 2    0 | 3    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    66.0 | 2    82.0 | 3    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:22 ===
+Source IP: 10.0.30.20
+Destination Port: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 28724    0 | 28725    0 | 28726    0 | 28727    0 | 28728    0 | Name: Destination Port, Length: 28729, dtype: int64
+Flow Duration: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 28724    6 | 28725    6 | 28726    6 | 28727    6 | 28728    6 | Name: Flow Duration, Length: 28729, dtype: int64
+Total Fwd Packets: 0            1 | 1            2 | 2            3 | 3            4 | 4            5 |          ...   | 28724    28725 | 28725    28726 | 28726    28727 | 28727    28728 | 28728    28729 | Name: Total Fwd Packets, Length: 28729, dtype: int64
+Flow Bytes/s: 0        0.000000e+00 | 1        1.119666e+06 | 2        1.278380e+06 | 3        1.367101e+06 | 4        1.451874e+06 |              ...      | 28724    2.423875e+05 | 28725    2.423864e+05 | 28726    2.423850e+05 | 28727    2.423843e+05 | 28728    2.423825e+05 | Name: Flow Bytes/s, Length: 28729, dtype: float64
+SYN Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 28724    0 | 28725    0 | 28726    0 | 28727    0 | 28728    0 | Name: SYN Flag Count, Length: 28729, dtype: int64
+RST Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 28724    0 | 28725    0 | 28726    0 | 28727    0 | 28728    0 | Name: RST Flag Count, Length: 28729, dtype: int64
+FIN Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 28724    0 | 28725    0 | 28726    0 | 28727    0 | 28728    0 | Name: FIN Flag Count, Length: 28729, dtype: int64
+ACK Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 28724    0 | 28725    0 | 28726    0 | 28727    0 | 28728    0 | Name: ACK Flag Count, Length: 28729, dtype: int64
+Average Packet Size: 0        42.0 | 1        42.0 | 2        42.0 | 3        42.0 | 4        42.0 |          ...  | 28724    42.0 | 28725    42.0 | 28726    42.0 | 28727    42.0 | 28728    42.0 | Name: Average Packet Size, Length: 28729, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:28 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.995093 | 2    61.487873 | 3    54.655312 | 4    51.240491 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:28 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | 4    8 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | 4    5 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.992396 | 2    61.487429 | 3    54.653571 | 4    51.239892 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | 4    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:29 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.990392 | 2    61.487154 | 3    54.657460 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:20:29 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | 3    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | 3    6 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | 3    4 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.978842 | 2    61.483205 | 3    54.654883 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | 3    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:28 ===
+Source IP: 10.0.5.1
+Destination Port: 0        0 | 1        0 | 2    57178 | 3    57186 | 4    57198 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    0 | 3    0 | 4    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    1 | 3    1 | 4    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0.000000e+00 | 1    8.199141e+01 | 2    2.067193e+07 | 3    1.205422e+07 | 4    1.630059e+07 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | 3    0 | 4    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    2 | 3    2 | 4    2 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0     82.0 | 1     82.0 | 2    172.5 | 3    171.0 | 4    171.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:29 ===
+Source IP: 10.0.6.1
+Destination Port: 0    57178 | 1    57186 | 2    57198 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    0 | 2    0 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    1 | 2    1 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0    0 | 1    0 | 2    0 | Name: Flow Bytes/s, dtype: int64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    1 | 1    1 | 2    1 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    279.0 | 1    276.0 | 2    276.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:34 ===
+Source IP: 10.0.30.20
+Destination Port: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 15828    0 | 15829    0 | 15830    0 | 15831    0 | 15832    0 | Name: Destination Port, Length: 15833, dtype: int64
+Flow Duration: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 15828    3 | 15829    3 | 15830    3 | 15831    3 | 15832    3 | Name: Flow Duration, Length: 15833, dtype: int64
+Total Fwd Packets: 0            1 | 1            2 | 2            3 | 3            4 | 4            5 |          ...   | 15828    15829 | 15829    15830 | 15830    15831 | 15831    15832 | 15832    15833 | Name: Total Fwd Packets, Length: 15833, dtype: int64
+Flow Bytes/s: 0        0.000000e+00 | 1        1.010482e+06 | 2        1.174405e+06 | 3        1.279176e+06 | 4        1.304895e+06 |              ...      | 15828    2.417325e+05 | 15829    2.417316e+05 | 15830    2.417282e+05 | 15831    2.417269e+05 | 15832    2.417163e+05 | Name: Flow Bytes/s, Length: 15833, dtype: float64
+SYN Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 15828    0 | 15829    0 | 15830    0 | 15831    0 | 15832    0 | Name: SYN Flag Count, Length: 15833, dtype: int64
+RST Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 15828    0 | 15829    0 | 15830    0 | 15831    0 | 15832    0 | Name: RST Flag Count, Length: 15833, dtype: int64
+FIN Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 15828    0 | 15829    0 | 15830    0 | 15831    0 | 15832    0 | Name: FIN Flag Count, Length: 15833, dtype: int64
+ACK Flag Count: 0        0 | 1        0 | 2        0 | 3        0 | 4        0 |         .. | 15828    0 | 15829    0 | 15830    0 | 15831    0 | 15832    0 | Name: ACK Flag Count, Length: 15833, dtype: int64
+Average Packet Size: 0        42.0 | 1        42.0 | 2        42.0 | 3        42.0 | 4        42.0 |          ...  | 15828    42.0 | 15829    42.0 | 15830    42.0 | 15831    42.0 | 15832    42.0 | Name: Average Packet Size, Length: 15833, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:40 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.986581 | 2    61.490797 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:40 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.989640 | 2    61.490852 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:45 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.976146 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:46 ===
+Source IP: 10.0.5.2
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.983102 | 2    61.484267 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+
+=== Anomalia Recebida - 2025-04-30 17:21:46 ===
+Source IP: 10.0.5.1
+Destination Port: 0    0 | 1    0 | 2    0 | Name: Destination Port, dtype: int64
+Flow Duration: 0    0 | 1    2 | 2    4 | Name: Flow Duration, dtype: int64
+Total Fwd Packets: 0    1 | 1    2 | 2    3 | Name: Total Fwd Packets, dtype: int64
+Flow Bytes/s: 0     0.000000 | 1    81.985936 | 2    61.486689 | Name: Flow Bytes/s, dtype: float64
+SYN Flag Count: 0    0 | 1    0 | 2    0 | Name: SYN Flag Count, dtype: int64
+RST Flag Count: 0    0 | 1    0 | 2    0 | Name: RST Flag Count, dtype: int64
+FIN Flag Count: 0    0 | 1    0 | 2    0 | Name: FIN Flag Count, dtype: int64
+ACK Flag Count: 0    0 | 1    0 | 2    0 | Name: ACK Flag Count, dtype: int64
+Average Packet Size: 0    82.0 | 1    82.0 | 2    82.0 | Name: Average Packet Size, dtype: float64
+

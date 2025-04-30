@@ -24,15 +24,17 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
             if msg:
                 if msg.metadata["performative"] == "inform-fluxo":
                     alert_data = jsonpickle.decode(msg.body)
-                    print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
-                    self.agent.alerts_anomalias.append(alert_data)
+                    if alert_data['Source IP'] != self.agent.maquina_a_proteger:
+                        print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
-                    # gera relatorio de anomalias
-                    self.relatorio_anomalias(alert_data)
+                        self.agent.alerts_anomalias.append(alert_data)
+
+                        # gera relatorio de anomalias
+                        self.relatorio_anomalias(alert_data)
                 
-                    # ids anomaly based apenas avisa o administrador de rede
-                    #self.enviar_email_alerta(alert_data) # nao consegue enviar email por estar a ser rodado no core
+                        # ids anomaly based apenas avisa o administrador de rede
+                        #self.enviar_email_alerta(alert_data) # nao consegue enviar email por estar a ser rodado no core
 
             else:
                 print(RED + "[Cordenador] Nenhum alerta recebido" + RESET)

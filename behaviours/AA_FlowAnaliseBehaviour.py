@@ -40,6 +40,8 @@ class FlowAnaliseBehaviour(CyclicBehaviour):
                     # predict
                     predictions = self.agent.model.predict(df)
 
+                    predictions = np.where(predictions == 1, "BENIGN", "ANOMALY")
+
                     #if "ANOMALY" in predictions:
                     if any(pred == "ANOMALY" for pred in predictions):
                         print(BLUE + "\n[Analise] Anomalia detetada no fluxo!" + RESET)

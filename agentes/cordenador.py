@@ -20,7 +20,6 @@ class CordenadorAgent(Agent):
         if flag_init == 1: # assinaturas
             self.alerts = []
             self.alerts_resolved = []
-            self.maquina_a_proteger = maquina_a_proteger
             self.defense_signatures = DEFENSE_SIGNATURES
 
         elif flag_init == 2: # anomalias
@@ -31,7 +30,8 @@ class CordenadorAgent(Agent):
             self.alerts_resolved = []
             self.alerts_anomalias = []
             self.defense_signatures = DEFENSE_SIGNATURES
-
+        
+        self.maquina_a_proteger = maquina_a_proteger
         self.flag_init = flag_init
 
     async def setup(self):
