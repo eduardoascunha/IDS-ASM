@@ -15,7 +15,6 @@ RESET = '\033[0m'
 
 class FlowReceiveBehaviour(CyclicBehaviour):
         async def run(self):
-            #print(BLUE + "FlowReceiveBehaviour a correr!" + RESET)
             msg = await self.receive(timeout=60)  # wait for a message for t seconds
             if msg and msg.metadata["performative"] == 'inform-fluxo':
                 print(BLUE + "[Analise] Mensagem recebida do sender" + RESET)

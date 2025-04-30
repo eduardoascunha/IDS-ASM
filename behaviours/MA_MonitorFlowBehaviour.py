@@ -27,5 +27,8 @@ class MonitorFlowBehaviour(CyclicBehaviour):
             await self.send(msg)
             print(GREEN + "[Monitor] Mensagem enviada!" + RESET)
         else:
-            print(GREEN + "[Monitor] Nada capturado" + RESET)
+            print(GREEN + "[Monitor] Nenhum Fluxo capturado" + RESET)
+        
         self.agent.flow_controller.wipe_flows()
+
+        await asyncio.sleep(0.01) # sleep adicionado pra forçar a trocar de agente 
