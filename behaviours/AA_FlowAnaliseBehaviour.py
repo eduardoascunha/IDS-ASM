@@ -27,32 +27,25 @@ class FlowAnaliseBehaviour(CyclicBehaviour):
 
                 try:
                     # Save the DataFrame to a CSV file
-                    file_path = "anomalyModel/data/csvs/flow_data_clean_v2.csv"
+                    # file_path = "anomalyModel/data/csvs/flow_data_clean.csv"
 
-                    if not os.path.exists(file_path):
-                        df.to_csv(file_path, index=False)
-                        print(BLUE + "\n[Analise] DataFrame guardado para o CSV file" + RESET)
+                    # if not os.path.exists(file_path):
+                    #     df.to_csv(file_path, index=False)
+                    #     print(BLUE + "\n[Analise] DataFrame guardado para o CSV file" + RESET)
                     
-                    else:
-                        df.to_csv(file_path, index=False, mode='a', header=False)
-                        print(BLUE + "\n[Analise] DataFrame appended para o CSV file" + RESET)
+                    # else:
+                    #     df.to_csv(file_path, index=False, mode='a', header=False)
+                    #     print(BLUE + "\n[Analise] DataFrame appended para o CSV file" + RESET)
 
-                    # scaler before predict
-                    X_new_scaled = self.agent.scaler.transform(df)
-
-                    # pca before predict
-                    X_new_pca = self.agent.pca.transform(X_new_scaled)
-                    
                     # predict
-                    predictions = self.agent.model.predict(X_new_pca)
+                    predictions = self.agent.model.predict(df)
 
-                    #predictions = np.where(predictions == -1, "ANOMALY", "BENIGN")
-                    predictions = ["ANOMALY" if p == -1 else "BENIGN" for p in predictions]
-
-                    df['prediction'] = predictions
-                    
-                    if "ANOMALY" in predictions:
+                    #if "ANOMALY" in predictions:
+                    if any(pred == "ANOMALY" for pred in predictions):
                         print(BLUE + "\n[Analise] Anomalia detetada no fluxo!" + RESET)
+
+                        df['prediction'] = predictions
+
                         print(BLUE + str(df[df['prediction'] == 'ANOMALY']) + RESET)  # Show only anomalies
                         
                         self.agent.alerts_anomalias.append({
