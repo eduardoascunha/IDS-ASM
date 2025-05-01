@@ -25,7 +25,7 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                 if msg.metadata["performative"] == "inform-fluxo":
                     alert_data = jsonpickle.decode(msg.body)
 
-                    if alert_data['Source IP'] != self.agent.maquina_a_proteger:
+                    if alert_data['Source IP'] not in self.agent.maquinas_a_proteger:
                         print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
                         self.agent.alerts_anomalias.append(alert_data)
