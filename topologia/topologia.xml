@@ -3,117 +3,129 @@
   <networks/>
   <devices>
     <device id="1" name="n1" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="101.0" y="177.0" lat="47.57755751787485" lon="-122.13096327109453" alt="2.0"/>
+      <position x="100.0" y="220.0" lat="47.57716664904005" lon="-122.13097674582379" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="2" name="n2" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="103.0" y="294.0" lat="47.57649398421379" lon="-122.130936321636" alt="2.0"/>
+      <position x="102.0" y="337.0" lat="47.576103107439685" lon="-122.13094979636527" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="3" name="n3" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="105.0" y="394.0" lat="47.57558496396253" lon="-122.13090937217748" alt="2.0"/>
+      <position x="104.0" y="437.0" lat="47.57519408040267" lon="-122.13092284690674" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="4" name="IDS-A" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="261.0" y="137.0" lat="47.577921114171346" lon="-122.12880731441267" alt="2.0"/>
+      <position x="260.0" y="180.0" lat="47.577530248050834" lon="-122.12882078914193" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="5" name="n5" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="262.0" y="441.0" lat="47.57515771899294" lon="-122.12879383968338" alt="2.0"/>
+      <position x="261.0" y="484.0" lat="47.574766832243775" lon="-122.12880731441267" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="6" name="IDS-S" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="308.0" y="290.0" lat="47.576530344695605" lon="-122.12817400213736" alt="2.0"/>
+      <position x="307.0" y="333.0" lat="47.57613946819293" lon="-122.12818747686661" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="7" name="n7" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="417.0" y="118.0" lat="47.578093821527666" lon="-122.12670525664782" alt="2.0"/>
+      <position x="416.0" y="161.0" lat="47.57770295669644" lon="-122.12671873137708" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="478.0" y="293.0" lat="47.576503074336614" lon="-122.12588329816285" alt="2.0"/>
+      <position x="477.0" y="336.0" lat="47.57611219763036" lon="-122.1258967728921" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="9" name="n9" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="423.0" y="460.0" lat="47.57498500195195" lon="-122.12662440827225" alt="2.0"/>
+      <position x="422.0" y="503.0" lat="47.574594113913484" lon="-122.12663788300152" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="10" name="n10" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="618.0" y="463.0" lat="47.574957730788135" lon="-122.12399683606618" alt="2.0"/>
+      <position x="683.0" y="505.0" lat="47.57457593300348" lon="-122.12312097866419" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="11" name="n11" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="599.0" y="300.0" lat="47.57643944344373" lon="-122.12425285592215" alt="2.0"/>
+      <position x="664.0" y="342.0" lat="47.57605765646262" lon="-122.12337699852016" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="12" name="n12" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="619.0" y="112.0" lat="47.57814836057446" lon="-122.12398336133693" alt="2.0"/>
+      <position x="684.0" y="154.0" lat="47.57776658605385" lon="-122.1231075039349" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
       </services>
     </device>
     <device id="13" name="ATACANTE" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="757.0" y="75.0" lat="47.57848468344104" lon="-122.12212384869882" alt="2.0"/>
+      <position x="822.0" y="117.0" lat="47.578102911372746" lon="-122.1212479912968" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="15" name="n15" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="761.0" y="240.0" lat="47.57698484858781" lon="-122.12206994978176" alt="2.0"/>
+      <position x="826.0" y="282.0" lat="47.57660306558348" lon="-122.12119409237974" alt="2.0"/>
       <services>
+        <service name="OSPFv2"/>
+        <service name="OSPFv3"/>
         <service name="IPForward"/>
         <service name="zebra"/>
-        <service name="OSPFv3"/>
-        <service name="OSPFv2"/>
+      </services>
+    </device>
+    <device id="14" name="n14" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="792.0" y="477.0" lat="47.57483046516923" lon="-122.12165223317463" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="16" name="n16" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="862.0" y="475.0" lat="47.57484864599086" lon="-122.1207090021263" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
       </services>
     </device>
   </devices>
@@ -238,6 +250,16 @@
       <iface2 id="1" name="eth1" mac="00:00:00:aa:00:3d" ip4="10.0.30.20" ip4_mask="24" ip6="2001:0:0:1e::14" ip6_mask="64"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
+    <link node1="14" node2="15">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:28" ip4="10.0.20.20" ip4_mask="24" ip6="2001:0:0:14::14" ip6_mask="64"/>
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:29" ip4="10.0.20.1" ip4_mask="24" ip6="2001:0:0:14::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="16" node2="15">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:2a" ip4="10.0.21.20" ip4_mask="24" ip6="2001:0:0:15::14" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:2b" ip4="10.0.21.1" ip4_mask="24" ip6="2001:0:0:15::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
   </links>
   <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="150.0"/>
   <session_options>
@@ -262,9 +284,9 @@
     <configuration name="checksums" value="0"/>
   </session_options>
   <session_metadata>
-    <configuration name="shapes" value="[{&quot;canvas&quot;: 1, &quot;type&quot;: &quot;oval&quot;, &quot;iconcoords&quot;: [28.0, 125.0, 444.0, 480.0], &quot;label&quot;: &quot;&quot;, &quot;fontfamily&quot;: &quot;Arial&quot;, &quot;fontsize&quot;: 12, &quot;labelcolor&quot;: &quot;#000000&quot;, &quot;color&quot;: &quot;#cfcfff&quot;, &quot;border&quot;: &quot;#000000&quot;, &quot;width&quot;: 0, &quot;bold&quot;: false, &quot;italic&quot;: false, &quot;underline&quot;: false}]"/>
+    <configuration name="shapes" value="[{&quot;canvas&quot;: 1, &quot;type&quot;: &quot;oval&quot;, &quot;iconcoords&quot;: [27.0, 168.0, 443.0, 523.0], &quot;label&quot;: &quot;&quot;, &quot;fontfamily&quot;: &quot;Arial&quot;, &quot;fontsize&quot;: 12, &quot;labelcolor&quot;: &quot;#000000&quot;, &quot;color&quot;: &quot;#cfcfff&quot;, &quot;border&quot;: &quot;#000000&quot;, &quot;width&quot;: 0, &quot;bold&quot;: false, &quot;italic&quot;: false, &quot;underline&quot;: false}]"/>
     <configuration name="edges" value="[]"/>
     <configuration name="hidden" value="[]"/>
-    <configuration name="canvas" value="{&quot;gridlines&quot;: true, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
+    <configuration name="canvas" value="{&quot;gridlines&quot;: false, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
   </session_metadata>
 </scenario>

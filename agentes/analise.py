@@ -32,7 +32,7 @@ class AnaliseAgent(Agent):
             self.recent_flows = asyncio.Queue() # a
             self.alerts_anomalias = []          # a
             try:
-                self.model = joblib.load('anomalyModel/isolation_model_clean.pkl')
+                self.model = joblib.load('anomalyModel/isolation_model_trafego_gerado.pkl')
             except Exception as e:
                 print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
                 raise  
@@ -45,7 +45,7 @@ class AnaliseAgent(Agent):
             self.recent_flows = asyncio.Queue() # a
             self.alerts_anomalias = []          # a
             try:
-                self.model = joblib.load('anomalyModel/isolation_model_clean.pkl')
+                self.model = joblib.load('anomalyModel/isolation_model_trafego_gerado.pkl')
             except Exception as e:
                 print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
                 raise  

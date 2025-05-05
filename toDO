@@ -11,11 +11,11 @@ toDO:
 Ataques:
 port scaning e syn flood -> sudo nmap -sS 10.0.0.20
 
-ping flood -> sudo hping3 -1 --flood 10.0.0.20 || sudo hping3 -1 10.0.0.20 -c 1000
+ping flood -> sudo hping3 -1 --flood 10.0.0.20
 
-dns flood -> sudo hping3 -2 -p 53 --flood 10.0.0.20 
+dns flood -> sudo hping3 -2 -p 53 --flood 10.0.0.20
 
-http flood -> ab -n 100 -c 50 http://10.0.0.20/ # nao funciona porque a porta 80 nao esta aberta e recusa todas as requisicoes
+http flood -> ab -n 100 -c 50 http://10.0.0.20/ # nao funciona
 
 
 Ver iptables:
