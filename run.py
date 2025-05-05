@@ -6,6 +6,9 @@ from agentes.cordenador import CordenadorAgent
 from agentes.monitor import MonitorAgent
 from agentes.analise import AnaliseAgent
 
+from misc.EnsembleAnomalyDetector import EnsembleAnomalyDetector
+from misc.AutoencoderAnomaly import AutoencoderAnomaly
+
 async def main():
     interface1 = "eth2"
     interface2 = "eth3"

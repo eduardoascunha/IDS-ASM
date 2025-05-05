@@ -31,6 +31,11 @@ class AnaliseAgent(Agent):
         elif flag_init == 2: # anomalias
             self.recent_flows = asyncio.Queue() # a
             self.alerts_anomalias = []          # a
+            try:
+                self.model = joblib.load('anomalyModel/isolation_model_dtp.pkl')
+            except Exception as e:
+                print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
+                raise  
 
         else: # asm
             self.signatures = ATTACK_SIGNATURES # s
@@ -39,15 +44,14 @@ class AnaliseAgent(Agent):
             self.alertas_detetados = {}         # s
             self.recent_flows = asyncio.Queue() # a
             self.alerts_anomalias = []          # a
+            try:
+                self.model = joblib.load('anomalyModel/isolation_model_dtp.pkl')
+            except Exception as e:
+                print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
+                raise  
         
         self.agenteCordenador = agenteCordenador
         self.flag_init = flag_init
-
-        try:
-            self.model = joblib.load('anomalyModel/isolation_model_clean.pkl')
-        except Exception as e:
-            print(BLUE + f"[Analise] Erro ao carregar modelo: {e}" + RESET)
-            raise  
 
     async def setup(self):
         print(BLUE + "[Analise] Agente de Análise iniciado." + RESET)
