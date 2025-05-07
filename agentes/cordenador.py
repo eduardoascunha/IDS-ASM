@@ -14,7 +14,7 @@ BLUE = '\033[34m'
 RESET = '\033[0m'
 
 class CordenadorAgent(Agent):
-    def __init__(self, jid, password, maquinas_a_proteger, flag_init):
+    def __init__(self, jid, password, maquinas_a_proteger, flag_init, agenteEngenheiro=None):
         super().__init__(jid=jid, password=password)
 
         if flag_init == 1: # assinaturas
@@ -24,12 +24,17 @@ class CordenadorAgent(Agent):
 
         elif flag_init == 2: # anomalias
             self.alerts_anomalias = []
+            self.loggerCounter = 0
+            self.agenteEngenheiro = agenteEngenheiro
 
         else: # asm
             self.alerts = []
             self.alerts_resolved = []
             self.alerts_anomalias = []
             self.defense_signatures = DEFENSE_SIGNATURES
+            self.loggerCounter = 0
+            self.fileLogCounter = 0
+            self.agenteEngenheiro = agenteEngenheiro
         
         self.maquinas_a_proteger = maquinas_a_proteger
         self.flag_init = flag_init
