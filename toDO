@@ -1,11 +1,11 @@
 toDO:
 
-- modelo de anomalias detetar anomalias e nao tudo o que aparece
-
 - ver ip das anomalias para o relatorio - faz sentido uma anomalia de fluxo ter ip, num fluxo varios pacotes com varios ips (a analise podia filtrar por ip até)
 - CONFIRMAR SE TA 100% correto
 
-- rever codigo e estrutura - anomalias mainly
+- rever codigo e estrutura das anomalias 
+
+- ver se todas as funcoes com envio de mensagem sao async
 
 
 Ataques:
@@ -16,6 +16,8 @@ ping flood -> sudo hping3 -1 --flood 10.0.0.20
 dns flood -> sudo hping3 -2 -p 53 --flood 10.0.0.20
 
 http flood -> ab -n 100 -c 50 http://10.0.0.20/ # nao funciona
+
+udp flood -> sudo hping3 --udp -p 80 --flood 10.0.0.20
 
 
 Ver iptables:

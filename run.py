@@ -5,6 +5,7 @@ import os
 from agentes.cordenador import CordenadorAgent
 from agentes.monitor import MonitorAgent
 from agentes.analise import AnaliseAgent
+from agentes.engenheiro import EngenheiroAgent
 
 async def main():
     interface1 = "eth2"
@@ -38,8 +39,11 @@ async def main():
         elif sys.argv[1] == "-a":   # anomalias
             flag_init = 2
             interface_list = [interface1]
+
+            engenheiroANOMALIA = EngenheiroAgent(jid=f"engenheiroANOMALIA@{ip}", password="NOPASSWORD")
+            await engenheiroANOMALIA.start()
             
-            cordenadorANOMALIA = CordenadorAgent(jid=f"cordenadorANOMALIA@{ip}", password="NOPASSWORD", maquinas_a_proteger=maquinas_a_proteger,flag_init=flag_init)
+            cordenadorANOMALIA = CordenadorAgent(jid=f"cordenadorANOMALIA@{ip}", password="NOPASSWORD", maquinas_a_proteger=maquinas_a_proteger, flag_init=flag_init, agenteEngenheiro=engenheiroANOMALIA.jid)
             await cordenadorANOMALIA.start()
 
             analiseANOMALIA = AnaliseAgent(jid=f"analiseANOMALIA@{ip}", password="NOPASSWORD", agenteCordenador=cordenadorANOMALIA.jid, flag_init=flag_init)
@@ -51,8 +55,11 @@ async def main():
         elif sys.argv[1] == "-asm":   # normal
             flag_init = 0 
             interface_list = [interface1, interface2, interface3]
+
+            engenheiroNORMAL = EngenheiroAgent(jid=f"engenheiroNORMAL@{ip}", password="NOPASSWORD")
+            await engenheiroNORMAL.start()
             
-            cordenadorNORMAL = CordenadorAgent(jid=f"cordenadorNORMAL@{ip}", password="NOPASSWORD", maquinas_a_proteger=maquinas_a_proteger, flag_init=flag_init)
+            cordenadorNORMAL = CordenadorAgent(jid=f"cordenadorNORMAL@{ip}", password="NOPASSWORD", maquinas_a_proteger=maquinas_a_proteger, flag_init=flag_init, agenteEngenheiro=engenheiroNORMAL.jid)
             await cordenadorNORMAL.start()
 
             analiseNORMAL = AnaliseAgent(jid=f"analiseNORMAL@{ip}", password="NOPASSWORD", agenteCordenador=cordenadorNORMAL.jid, flag_init=flag_init)
@@ -75,14 +82,18 @@ async def main():
             await monitorASSINATURA.stop()
             await analiseASSINATURA.stop()
             await cordenadorASSINATURA.stop()
+        
         elif flag_init == 2:
             await monitorANOMALIA.stop()
             await analiseANOMALIA.stop()
             await cordenadorANOMALIA.stop()
+            await engenheiroANOMALIA.stop()
+        
         elif flag_init == 0:
             await monitorNORMAL.stop()
             await analiseNORMAL.stop()
             await cordenadorNORMAL.stop()
+            await engenheiroNORMAL.stop()
 
 if __name__ == "__main__":
     spade.run(main())
