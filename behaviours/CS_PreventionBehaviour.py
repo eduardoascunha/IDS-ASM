@@ -25,7 +25,7 @@ class PreventionBehaviour(CyclicBehaviour):
         action = self.agent.defense_signatures.get(type)
         
         if action:    
-            print(RED + f"[Defesa] {action['description']} em execução para o IP {ip}." + RESET)
+            print(RED + f"[Cordenador] {action['description']} em execução para o IP {ip}." + RESET)
             command = action["command"](ip)
             
             print(RED + f"[Cordenador -> Firewall] A executar: {command}" + RESET)

@@ -16,11 +16,14 @@ class ReceiveLogsBehaviour(CyclicBehaviour):
 
     async def run(self):
         try:
-            msg = await self.receive(timeout=10)
+            msg = await self.receive(timeout=60) # 1 minuto
             if msg:
+                self.agent.agenteCordenador = msg.sender
                 if msg.metadata["performative"] == "inform":
                     log_data = jsonpickle.decode(msg.body)
-                    self.agent.logs.put(log_data)
+                    await self.agent.logs.put(log_data['numero_ficheiro'])
+                    #print(YELLOW + f"[Engenheiro] Log recebido: {log_data}" + RESET)
+
             else:
                 print(YELLOW + "[Engenheiro] Nenhum log recebido" + RESET)
 

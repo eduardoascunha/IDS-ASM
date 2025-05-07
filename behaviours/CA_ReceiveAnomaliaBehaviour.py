@@ -26,23 +26,23 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                     alert_data = jsonpickle.decode(msg.body)
 
                     if alert_data['Source IP'] not in self.agent.maquinas_a_proteger:
-                        print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
+                        #print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
-                        self.agent.alerts_anomalias.append(alert_data)
+                        self.agent.alerts_anomalias.append(alert_data) ### VER PRA QUE É ISTO TODO
 
                         # gera relatorio de anomalias
                         # ficheiro de logs de 10 em 10
-                        self.agent.fileLogCounter += 1
-                        if self.agent.fileLogCounter > 10:
+                        self.agent.loggerCounter += 1
+                        if self.agent.loggerCounter > 2: #TODO METER A 10 
+
+                            self.agent.loggerCounter = 0  
                             self.agent.fileLogCounter += 1
-                            self.agent.fileLogCounter = 0  
+
                             self.relatorio_anomalias(alert_data, self.agent.fileLogCounter)
 
                             # enviar logs
-                            msg = Message(to=f"{self.agent.agenteEngenheiro}")
-                            msg.set_metadata("performative", "inform")
-                            msg.body = jsonpickle.encode(ficheiro)
-                            await self.send(msg)
+                            await self.enviar_relatorio_anomalias(self.agent.fileLogCounter)
+                            
                         else:                            
                             self.relatorio_anomalias(alert_data, self.agent.fileLogCounter)
                 
@@ -59,10 +59,14 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
     def relatorio_anomalias(self, alert_data, loggerCounter):    
         try:
             load_dotenv()
-            RELATORIO_PATH = os.getenv("RELATORIO_PATH")
-            RELATORIO_PATH = f"{RELATORIO_PATH}_{loggerCounter}.txt"
+            RELATORIO_PATH_incomplete = os.getenv("RELATORIO_PATH")
+            RELATORIO_PATH = f"{RELATORIO_PATH_incomplete}_{loggerCounter}.txt"
 
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            if not os.path.exists(RELATORIO_PATH):
+                with open(RELATORIO_PATH, "w") as f:
+                    f.write(f"=== Relatório de Logs {loggerCounter} ===\n")
 
             with open(RELATORIO_PATH, "a") as f:
                 f.write(f"=== Anomalia Recebida - {timestamp} ===\n")
@@ -78,7 +82,18 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
         except Exception as e:
             print(RED + f"[Cordenador] Erro ao escrever no relatório: {e}" + RESET)
 
-    # nao usado, por causa de limitação do core
+    async def enviar_relatorio_anomalias(self, loggerCounter):
+        try:
+            msg = Message(to=f"{self.agent.agenteEngenheiro}")
+            msg.set_metadata("performative", "inform")
+            msg.body = jsonpickle.encode({"numero_ficheiro": loggerCounter})
+            await self.send(msg)
+
+            print(RED + f"[Cordenador] LoggerCounter enviado!" + RESET)
+        except Exception as e:
+            print(RED + f"[Cordenador] Erro ao enviar relatório: {e}" + RESET)
+
+    # nao usado, por de limitação do core
     def enviar_email_alerta(self, alert_data):
         try:
             load_dotenv()

@@ -40,7 +40,7 @@ async def main():
             flag_init = 2
             interface_list = [interface1]
 
-            engenheiroANOMALIA = EngenheiroAgent(jid=f"engenheiroANOMALIA@{ip}", password="NOPASSWORD", agenteCordenador=monitorANOMALIA.jid)
+            engenheiroANOMALIA = EngenheiroAgent(jid=f"engenheiroANOMALIA@{ip}", password="NOPASSWORD")
             await engenheiroANOMALIA.start()
             
             cordenadorANOMALIA = CordenadorAgent(jid=f"cordenadorANOMALIA@{ip}", password="NOPASSWORD", maquinas_a_proteger=maquinas_a_proteger, flag_init=flag_init, agenteEngenheiro=engenheiroANOMALIA.jid)
@@ -56,7 +56,7 @@ async def main():
             flag_init = 0 
             interface_list = [interface1, interface2, interface3]
 
-            engenheiroNORMAL = EngenheiroAgent(jid=f"engenheiroNORMAL@{ip}", password="NOPASSWORD", agenteCordenador=monitorNORMAL.jid)
+            engenheiroNORMAL = EngenheiroAgent(jid=f"engenheiroNORMAL@{ip}", password="NOPASSWORD")
             await engenheiroNORMAL.start()
             
             cordenadorNORMAL = CordenadorAgent(jid=f"cordenadorNORMAL@{ip}", password="NOPASSWORD", maquinas_a_proteger=maquinas_a_proteger, flag_init=flag_init, agenteEngenheiro=engenheiroNORMAL.jid)

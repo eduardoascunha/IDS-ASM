@@ -5,8 +5,9 @@ from misc.signatures import DEFENSE_SIGNATURES
 
 from behaviours.CS_ReceiveAlertsBehaviour import ReceiveAlertsBehaviour
 from behaviours.CS_PreventionBehaviour import PreventionBehaviour
-from behaviours.CA_ReceiveAnomaliaBehaviour import ReceiveAnomaliaBehaviour
 from behaviours.CS_ApagaAlertasBehaviour import ApagaAlertasBehaviour
+from behaviours.CA_ReceiveAnomaliaBehaviour import ReceiveAnomaliaBehaviour
+from behaviours.CA_ReceiveRequestBehaviour import ReceiveRequestBehaviour
 
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -25,6 +26,7 @@ class CordenadorAgent(Agent):
         elif flag_init == 2: # anomalias
             self.alerts_anomalias = []
             self.loggerCounter = 0
+            self.fileLogCounter = 0
             self.agenteEngenheiro = agenteEngenheiro
 
         else: # asm
@@ -49,12 +51,16 @@ class CordenadorAgent(Agent):
         
         elif self.flag_init == 2: # anomalia
             self.add_behaviour(ReceiveAnomaliaBehaviour())
+            self.add_behaviour(ReceiveRequestBehaviour())
 
         else: # asm
             self.add_behaviour(ReceiveAlertsBehaviour())
             self.add_behaviour(PreventionBehaviour())
-            self.add_behaviour(ReceiveAnomaliaBehaviour())
             self.add_behaviour(ApagaAlertasBehaviour(period=3600)) # 1h
+            self.add_behaviour(ReceiveAnomaliaBehaviour())
+            self.add_behaviour(ReceiveRequestBehaviour())
+            
+            
         
         
 
