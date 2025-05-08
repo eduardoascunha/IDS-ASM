@@ -28,20 +28,20 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                     if alert_data['Source IP'] not in self.agent.maquinas_a_proteger:
                         #print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
-                        self.agent.alerts_anomalias.append(alert_data) ### VER PRA QUE É ISTO TODO
-
                         # gera relatorio de anomalias
                         # ficheiro de logs de 10 em 10
                         self.agent.loggerCounter += 1
-                        if self.agent.loggerCounter > 2: #TODO METER A 10 
-
-                            self.agent.loggerCounter = 0  
-                            self.agent.fileLogCounter += 1
+                        if self.agent.loggerCounter > 10:  
 
                             self.relatorio_anomalias(alert_data, self.agent.fileLogCounter)
 
                             # enviar logs
                             await self.enviar_relatorio_anomalias(self.agent.fileLogCounter)
+
+                            # incrementa valor do fileLogCounter, ou seja começa a escrever num file novo 
+                            # e reseta o loggerCounter
+                            self.agent.loggerCounter = 0  
+                            self.agent.fileLogCounter += 1
                             
                         else:                            
                             self.relatorio_anomalias(alert_data, self.agent.fileLogCounter)
@@ -89,7 +89,6 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
             msg.body = jsonpickle.encode({"numero_ficheiro": loggerCounter})
             await self.send(msg)
 
-            print(RED + f"[Cordenador] LoggerCounter enviado!" + RESET)
         except Exception as e:
             print(RED + f"[Cordenador] Erro ao enviar relatório: {e}" + RESET)
 

@@ -24,7 +24,6 @@ class CordenadorAgent(Agent):
             self.defense_signatures = DEFENSE_SIGNATURES
 
         elif flag_init == 2: # anomalias
-            self.alerts_anomalias = []
             self.loggerCounter = 0
             self.fileLogCounter = 0
             self.agenteEngenheiro = agenteEngenheiro
@@ -32,7 +31,6 @@ class CordenadorAgent(Agent):
         else: # asm
             self.alerts = []
             self.alerts_resolved = []
-            self.alerts_anomalias = []
             self.defense_signatures = DEFENSE_SIGNATURES
             self.loggerCounter = 0
             self.fileLogCounter = 0
