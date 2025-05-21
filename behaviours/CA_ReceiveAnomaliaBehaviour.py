@@ -29,9 +29,9 @@ class ReceiveAnomaliaBehaviour(CyclicBehaviour):
                         #print(RED + f"[Cordenador] Anomalia Recebida proveniente de: {alert_data['Source IP']}" + RESET)
 
                         # gera relatorio de anomalias
-                        # ficheiro de logs de 10 em 10
+                        # ficheiro de logs de 5 em 5
                         self.agent.loggerCounter += 1
-                        if self.agent.loggerCounter > 10:  
+                        if self.agent.loggerCounter > 5:  
 
                             self.relatorio_anomalias(alert_data, self.agent.fileLogCounter)
 
