@@ -26,6 +26,9 @@ Sistema distribuído de deteção de intrusões em redes, baseado em agentes int
 - Bloqueio automático de ataques simulados.
 - Redução de falsos positivos com validação manual.
 
+## Relatório
+O relatório encontra-se na diretoria `Rel` e contem informação muito mais detalhada relativamente ao sistema desenvolvido.
+
 **Autores:**  
 David Teixeira, Eduardo Cunha, Jorge Rodrigues, Tiago Rodrigues  
 Maio 2025
